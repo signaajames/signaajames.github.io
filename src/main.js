@@ -6,7 +6,7 @@ let experience = '1 year'
 document.querySelector('#app').innerHTML = /*html*/`
   <div class='header'>
     <h2 class='name'>Signaa James</h1>
-    <p class='bio'>Back-end engineer</p>
+    <p class='bio'>Back-end Engineer</p>
   </div>
 
   <div class='navigation'>
