@@ -29,7 +29,8 @@ body {
   top: 0;
   border-bottom: #262626 1px solid;
   background-color: rgba(0, 0, 0, 0.276);
-    backdrop-filter: blur(5px); /* blur behind the header */
+  backdrop-filter: blur(5px); /* blur behind the header */
+  z-index: 10000;
 }
 
 p {
@@ -67,7 +68,7 @@ a:hover {
 
 .seperator {
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #262626;
   margin: 50px 0;
 }
@@ -110,4 +111,29 @@ a:hover {
 #sub {
   font-size: 12px;
   text-align: center;
+}
+
+#cat {
+  position: absolute;
+  width: 900px;
+  left: -650px;
+  top: 70%;
+  rotate: 90deg;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skillCard {
+  background-color: rgb(0, 0, 0);
+  height: 20px;
+  width: fit-content;
+  border: #262626 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
 }

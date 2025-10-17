@@ -1,4 +1,5 @@
 import './style.css'
+import cat from './Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview.png'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <div class='header'>
@@ -15,8 +16,10 @@ document.querySelector('#app').innerHTML = /*html*/`
     <a href="">Contact</a>
   </div>
 
+    <img id='cat' src="">
+
   <div class='content'>
-    <p id='sub'>Chrome/firefox based browsers recommended</p>
+    <p id='sub'>Chrome/firefox based browsers recommended & default zoom (100%), anything more might cause issues or block text & computer recommended instead of phone</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
       <h3>GMT+8</h3>
@@ -35,17 +38,19 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section id='about'>
       <h1>About</h1>
       <section class='content-section'>
-        <h3>Past</h3>
-        <p>I started coding since I was 12, I wanted to make games and web apps, but I didn't have the skill back then, nor the patience. Evnentually, I actually started to learn JavaScript, which I found fun. I took some courses online, paid and free, to learn the basics of Java, JavaScript, Python, HTML, and CSS.</p>
-        <h3>Present</h3>
-        <p>Currently I'm a back-end and front-end engineer with less than 1 year of experience. I belive in minimal abstractions and clean interfaces between humans and machines.</p>
-        <h3>Future</h3>
-        <p>In the future, I'm excited to see how the industry evolves. I also want to find a team, and start a company.</p>
+        <p>
+          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy. I mainly work on web projects.
+
+          I currently use Windows 10 since my computer doesn’t support Windows 11, but I’ve also started dual booting into Linux to learn about it a little bit.
+
+          I eventually want to find a team, start a company, and keep building cool things.
+        </p>
+
       </section>
     </section><!-- end of about section -->
     <!-- -->
     
-    <div class='seperator'></div> <!-- seperator -->
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
     
     <!-- -->
     <section id='skills'>
@@ -69,7 +74,7 @@ document.querySelector('#app').innerHTML = /*html*/`
     </section> <!-- end of experience section -->
     <!-- -->
     
-    <div class='seperator'></div> <!-- seperator -->
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
     
     <!-- -->
     <section id='projects'>
@@ -80,7 +85,7 @@ document.querySelector('#app').innerHTML = /*html*/`
     </section> <!-- end of projects section -->
     <!-- -->
     
-    <div class='seperator'></div> <!-- seperator -->
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
 
     <!-- -->
     <section id='contact'>
@@ -92,3 +97,5 @@ document.querySelector('#app').innerHTML = /*html*/`
     <!-- -->
   </div>
 `
+
+document.getElementById('cat').src = cat
