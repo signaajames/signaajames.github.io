@@ -20,10 +20,30 @@ document.querySelector('#app').innerHTML = /*html*/`
 
   <div class='content'>
     <section id='hero'>
-      <h1>I like cats & code</h1>
+      <h1>I like cats & code.</h1>
+      <h3>GMT+8</h3>
       <p>
-        Hi, I'm Signaa James, a back-end developer with less than ${experience} of experience. I first started teaching myself how to code for a few weeks, and later moved on to Codedex to learn the basics of JavaScript, Python, HTML, CSS, and Java. I'm currently continuing on Codecademy on the back-end path. In the future, I hope to build a team and start my own company.
+        Hi, I'm Signaa James, a back-end developer with less than ${experience} of experience. I specialize in back-end and APIs. Focused on learning & creating minimalist, clean, performant products.
       </p>
+      <section class='buttons'>
+        <button>View Projects</button>
+        <button>Contact Me</button>
+      </section>
+    </section> <!-- end of Hero section -->
+
+    <section id='about'>
+
+    </section>
+
+    <section id='experience'>
+
+    </section>
+    
+    <section id='projects'>
+
+    </section>
+    
+    <section id='contact'>
 
     </section>
   </div>
