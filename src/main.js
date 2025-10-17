@@ -16,6 +16,7 @@ document.querySelector('#app').innerHTML = /*html*/`
   </div>
 
   <div class='content'>
+    <p id='sub'>Chrome/firefox based browsers recommended</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
       <h3>GMT+8</h3>
