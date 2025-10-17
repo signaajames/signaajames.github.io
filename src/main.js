@@ -8,12 +8,14 @@ document.querySelector('#app').innerHTML = /*html*/`
   </div>
 
   <div class='navigation'>
-    <a href="">Home</a>
-    <a href="">Blog</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <section>
+      <a href="">Home</a>
+      <a href="">Blog</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </section>
   </div>
 
     <img id='cat' src="">
