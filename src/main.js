@@ -10,10 +10,10 @@ document.querySelector('#app').innerHTML = /*html*/`
   <div class='navigation'>
     <a href="">Home</a>
     <a href="">Blog</a>
-    <a href="">About</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
-    <a href="">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 
     <img id='cat' src="">
@@ -27,8 +27,12 @@ document.querySelector('#app').innerHTML = /*html*/`
         Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
       </p>
       <section class='buttons'>
-        <button id='projectBtn'>View Projects</button>
-        <button id='contactBtn'>Contact Me</button>
+        <a href="#projects">
+          <button id='projectBtn'>View Projects</button>
+        </a>
+        <a href="#contact">
+          <button id='contactBtn'>Contact Me</button>
+        </a>
       </section>
     </section> <!-- end of Hero section -->
 
@@ -91,7 +95,19 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
+        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail-two'></span></p>
+        <!-- <form class='contact-form'>
+          <label class='contact-label' for='contactName'>Name</label>
+          <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
 
+          <label class='contact-label' for='contactEmail'>Email</label>
+          <input class='contact-input' type='email' name='email' id='contactEmail' placeholder='you@example.com' required>
+
+          <label class='contact-label' for='contactMessage'>Message</label>
+          <textarea class='contact-textarea' name='message' id='contactMessage' rows='5' placeholder='Say hello...'></textarea>
+
+          <button type='submit' class='contact-submit'>Send Message</button>
+        </form> -->
       </section>
     </section> <!-- end of contact section -->
     <!-- -->
@@ -99,3 +115,36 @@ document.querySelector('#app').innerHTML = /*html*/`
 `
 
 document.getElementById('cat').src = cat
+
+const toast = document.createElement('div')
+toast.classList.add('toast')
+toast.innerHTML = /*html*/`
+  <p>Copied to clipboard</p>
+`
+
+const app = document.getElementById('app')
+
+app.appendChild(toast)
+
+const myMailAddress = document.getElementsByClassName('mail')[0]
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const showToast = async () => {
+  toast.classList.add('active')
+  await delay(2000)
+  toast.classList.remove('active')
+
+}
+
+function copyMal() {
+  let textToCopy = myMailAddress.innerHTML
+  navigator.clipboard.writeText(textToCopy)
+  showToast()
+}
+
+let emailValue = document.getElementById('contactEmail').value
+
+myMailAddress.addEventListener('click', copyMal)
