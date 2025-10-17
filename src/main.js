@@ -9,8 +9,6 @@ document.querySelector('#app').innerHTML = /*html*/`
 
   <div class='navigation'>
     <section class='navigations'>
-      <a class='hrefs' href="">Home</a>
-      <a class='hrefs' href="">Blog</a>
       <a class='hrefs' href="#about">About</a>
       <a class='hrefs' href="#skills">Skills</a>
       <a class='hrefs' href="#projects">Projects</a>
