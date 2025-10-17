@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = /*html*/`
       <h1>I like cats & code.</h1>
       <h3>GMT+8</h3>
       <p>
-        Hi, I'm Signaa James, a back-end developer with less than ${experience} of experience. I specialize in back-end and APIs. Focused on learning & creating minimalist, clean, performant products.
+        Hi, I'm Signaa James, a back-end developer with less than ${experience} of experience. Focused on learning & creating minimalist, clean, performant products.
       </p>
       <section class='buttons'>
         <button>View Projects</button>
@@ -31,20 +31,36 @@ document.querySelector('#app').innerHTML = /*html*/`
       </section>
     </section> <!-- end of Hero section -->
 
+    <div class='seperator'></div> <!-- seperator -->
+    
+    <!-- -->
     <section id='about'>
-
-    </section>
-
+      <h1>About</h1>
+    </section><!-- end of about section -->
+    <!-- -->
+    
+    <div class='seperator'></div> <!-- seperator -->
+    
+    <!-- -->
     <section id='experience'>
 
-    </section>
+    </section> <!-- end of experience section -->
+    <!-- -->
     
+    <div class='seperator'></div> <!-- seperator -->
+    
+    <!-- -->
     <section id='projects'>
 
-    </section>
+    </section> <!-- end of projects section -->
+    <!-- -->
     
+    <div class='seperator'></div> <!-- seperator -->
+
+    <!-- -->
     <section id='contact'>
 
-    </section>
+    </section> <!-- end of contact section -->
+    <!-- -->
   </div>
 `
