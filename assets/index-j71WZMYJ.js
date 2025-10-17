@@ -1,0 +1,141 @@
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function d(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=d(e);fetch(e.href,t)}})();const p="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png";document.querySelector("#app").innerHTML=`
+  <div class='header'>
+    <h2 class='name'>SignaaJames</h2>
+    <p class='bio'>Back-end Engineer & Front-end Engineer</p>
+  </div>
+
+  <div class='navigation'>
+    <section class='navigations'>
+      <a class='hrefs' href="#about">About</a>
+      <a class='hrefs' href="#skills">Skills</a>
+      <a class='hrefs' href="#projects">Projects</a>
+      <a class='hrefs' href="#contact">Contact</a>
+    </section>
+  </div>
+
+    <img id='cat' src="">
+
+  <div class='content'>
+    <p id='sub'>Chrome/firefox based browsers recommended & default zoom (100%), anything more might cause issues or block text & computer recommended instead of phone</p>
+    <section id='hero'>
+      <h1>I like cats & code.</h1>
+      <h3>GMT+8</h3>
+      <p>
+        Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
+      </p>
+      <section class='buttons'>
+        <a href="#projects">
+          <button id='projectBtn'>View Projects</button>
+        </a>
+        <a href="#contact">
+          <button id='contactBtn'>Contact Me</button>
+        </a>
+      </section>
+    </section> <!-- end of Hero section -->
+
+    <div class='seperator'></div> <!-- seperator -->
+    
+    <!-- -->
+    <section id='about'>
+      <h1>About</h1>
+      <section class='content-section'>
+        <p>
+          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy. I mainly work on web projects.
+
+          I currently use Windows 10 since my computer doesn’t support Windows 11, but I’ve also started dual booting into Linux to learn about it a little bit.
+
+          I eventually want to find a team, start a company, and keep building cool things.
+        </p>
+
+      </section>
+    </section><!-- end of about section -->
+    <!-- -->
+    
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
+    
+    <!-- -->
+    <section id='skills'>
+      <h1>Skills</h1>
+      <section class='content-section'>
+        <h3>Frontend</h3>
+        <section class='skill-list'>
+          <div class='skillCard'>HTML</div>
+          <div class='skillCard'>JavaScript</div>
+          <div class='skillCard'>React</div>
+        </section>
+        <h3>Styling</h3>
+        <section class='skill-list'>
+          <div class='skillCard'>CSS</div>
+        </section>
+        <h3>Other</h3>
+        <section class='skill-list'>
+          <div class='skillCard'>Git</div>
+        </section>
+      </section>
+    </section> <!-- end of experience section -->
+    <!-- -->
+    
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
+    
+    <!-- -->
+    <section id='projects'>
+      <h1>Projects</h1>
+      <section class='content-section'>
+
+      </section>
+    </section> <!-- end of projects section -->
+    <!-- -->
+    
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
+
+    <!-- -->
+    <section id='contact'>
+      <h1>Contact</h1>
+      <section class='content-section'>
+        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail'>penguingnop@gmail.com</span></p>
+        <!-- <form class='contact-form'>
+          <label class='contact-label' for='contactName'>Name</label>
+          <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
+
+          <label class='contact-label' for='contactEmail'>Email</label>
+          <input class='contact-input' type='email' name='email' id='contactEmail' placeholder='you@example.com' required>
+
+          <label class='contact-label' for='contactMessage'>Message</label>
+          <textarea class='contact-textarea' name='message' id='contactMessage' rows='5' placeholder='Say hello...'></textarea>
+
+          <button type='submit' class='contact-submit'>Send Message</button>
+        </form> -->
+      </section>
+    </section> <!-- end of contact section -->
+    <!-- -->
+  </div>
+
+  <footer class='footer'>
+    <section class='footer-top'>
+      <div class='footer-brand'>
+        <h2>SignaaJames</h2>
+      </div>
+      <nav class='footer-nav'>
+        <a href='#about'>About</a>
+        <a href='#skills'>Skills</a>
+        <a href='#projects'>Projects</a>
+        <a href='#contact'>Contact</a>
+      </nav>
+      <div class='footer-social'>
+        <a href='mailto:SignaaJames@proton.me' class='footer-link' aria-label='Email Signaa James'>
+          Email
+        </a>
+        <a href='https://github.com/penguinOperator' class='footer-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
+          <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
+            <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <div class='footer-meta'>
+      <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
+    </div>
+  </footer>
+`;document.getElementById("cat").src=p;const o=document.createElement("div");o.classList.add("toast");o.innerHTML=`
+  <p>Copied to clipboard</p>
+`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function u(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await u(2e3),o.classList.remove("active")};function h(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",h);
