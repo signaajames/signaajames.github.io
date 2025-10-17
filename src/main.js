@@ -8,13 +8,13 @@ document.querySelector('#app').innerHTML = /*html*/`
   </div>
 
   <div class='navigation'>
-    <section>
-      <a href="">Home</a>
-      <a href="">Blog</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <section class='navigations'>
+      <a class='hrefs' href="">Home</a>
+      <a class='hrefs' href="">Blog</a>
+      <a class='hrefs' href="#about">About</a>
+      <a class='hrefs' href="#skills">Skills</a>
+      <a class='hrefs' href="#projects">Projects</a>
+      <a class='hrefs' href="#contact">Contact</a>
     </section>
   </div>
 
@@ -97,7 +97,7 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
-        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail-two'></span></p>
+        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail'>penguingnop@gmail.com</span></p>
         <!-- <form class='contact-form'>
           <label class='contact-label' for='contactName'>Name</label>
           <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
@@ -114,6 +114,33 @@ document.querySelector('#app').innerHTML = /*html*/`
     </section> <!-- end of contact section -->
     <!-- -->
   </div>
+
+  <footer class='footer'>
+    <section class='footer-top'>
+      <div class='footer-brand'>
+        <h2>SignaaJames</h2>
+      </div>
+      <nav class='footer-nav'>
+        <a href='#about'>About</a>
+        <a href='#skills'>Skills</a>
+        <a href='#projects'>Projects</a>
+        <a href='#contact'>Contact</a>
+      </nav>
+      <div class='footer-social'>
+        <a href='mailto:SignaaJames@proton.me' class='footer-link' aria-label='Email Signaa James'>
+          Email
+        </a>
+        <a href='https://github.com/penguinOperator' class='footer-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
+          <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
+            <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <div class='footer-meta'>
+      <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
+    </div>
+  </footer>
 `
 
 document.getElementById('cat').src = cat
@@ -129,6 +156,7 @@ const app = document.getElementById('app')
 app.appendChild(toast)
 
 const myMailAddress = document.getElementsByClassName('mail')[0]
+const myMailAddress2 = document.getElementsByClassName('mail')[1]
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -147,6 +175,11 @@ function copyMal() {
   showToast()
 }
 
-let emailValue = document.getElementById('contactEmail').value
+function copyMal2() {
+  let textToCopy = myMailAddress2.innerHTML
+  navigator.clipboard.writeText(textToCopy)
+  showToast()
+}
 
+myMailAddress2.addEventListener('click', copyMal2)
 myMailAddress.addEventListener('click', copyMal)
