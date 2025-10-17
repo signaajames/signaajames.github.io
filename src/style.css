@@ -56,11 +56,29 @@ a:hover {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   width: min(100%, 1200px);
   margin: 50px auto;
   text-align: left;
 }
 
+.seperator {
+  width: 100%;
+  height: 1px;
+  background-color: #262626;
+  margin: 50px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px
+}
+
+#projectBtn {
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}

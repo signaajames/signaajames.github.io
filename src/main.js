@@ -23,8 +23,8 @@ document.querySelector('#app').innerHTML = /*html*/`
         Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
       </p>
       <section class='buttons'>
-        <button>View Projects</button>
-        <button>Contact Me</button>
+        <button id='projectBtn'>View Projects</button>
+        <button id='contactBtn'>Contact Me</button>
       </section>
     </section> <!-- end of Hero section -->
 
