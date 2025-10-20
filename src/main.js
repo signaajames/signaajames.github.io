@@ -85,13 +85,15 @@ document.querySelector('#app').innerHTML = /*html*/`
     <!-- -->
     <section id='projects'>
       <h1>Projects</h1>
-      <section class='content-section'>
-        <div class='projectCard'>
-          <img src="" alt="" class='projectImg'>
-          <p class='projectName'>Catinder</p>
-          <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
-          <a href="https://github.com/signaajames/Catinder" class='projectUrl'></a>
-        </div>
+      <section class='content-section projects-grid'>
+        <article class='projectCard'>
+          <img src="" alt="Screenshot of the Catinder project" class='projectImg' loading='lazy'>
+          <div class='projectDetails'>
+            <p class='projectName'>Catinder</p>
+            <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
+            <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+          </div>
+        </article>
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -192,3 +194,4 @@ myMailAddress.addEventListener('click', copyMal)
 let projectImg = document.getElementsByClassName('projectImg')[0]
 
 projectImg.src = catinerSS
+
