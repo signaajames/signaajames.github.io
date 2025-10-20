@@ -31,7 +31,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         blog: resolve(__dirname, 'blog/index.html'),
-        // blog1: resolve(__dirname, 'blog/blog1/index.html'),
+        blog1: resolve(__dirname, 'blog/Lorem-ipsum/index.html'),
         // blog2: resolve(__dirname, 'blog/blog2/index.html'),
       }
     }

@@ -64,10 +64,9 @@ p {
 }
 
 .content {
-  min-height: 100vh;
   width: min(100%, 1200px);
   margin: 50px auto;
-  text-align: left;
+  display: flex;
 }
 
 .seperator {
@@ -75,4 +74,40 @@ p {
   height: 2px;
   background-color: #262626;
   margin: 60px 0;
+}
+
+.BlogCard {
+    background-color: #0A0A0A;
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 400px;
+    height: 400px;
+    border-radius: 16px;
+    border: #262626 1px solid;
+    transition: all 0.15s ease;
+}
+
+.BlogCard:hover {
+    background-color: #0d0d0d;
+}
+
+.shortContent {
+    line-height: 23px;
+}
+
+.readMore {
+    margin-top: 10px;
+    display: inline-block;
+    color: #d8d8d8;
+    transform: translateX(0);
+    transition: all 0.1s ease;
+}
+
+.readMore:hover {
+    transform: translateX(5px);
+}
+
+.readMore:visited {
+    color:#B1b1b1
 }

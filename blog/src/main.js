@@ -14,26 +14,20 @@ const initBlog = () => {
 
     <div class='navigation'>
       <section class='navigations'>
-        <a class='hrefs' href="/" id='home'>Blog</a>
-        <a class='hrefs' href="#about">About</a>
-        <a class='hrefs' href="#skills">Skills</a>
-        <a class='hrefs' href="#projects">Projects</a>
-        <a class='hrefs' href="#contact">Contact</a>
+        <a class='hrefs' href="/" id='home'>Home</a>
       </section>
     </div>
 
     <div class='content'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis, debitis eius ut ea sequi quidem hic fugiat, delectus nisi ex iure reprehenderit velit rem ad et molestiae unde inventore!</p>
+        <div class='BlogCard'>
+            <h2>Lorem ipsum</h2>
+            <p class='date'>October 15, 2025</p>
+            <p class='shortContent'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro rem eius esse repellat veniam excepturi vitae totam. Autem voluptatum earum debitis iure aperiam molestias, neque eveniet quam officia, quidem necessitatibus?</p>
+            <a class='readMore' href='./Lorem-ipsum'>Read more...</a>
+        </div>
     </div>
   `
 
-  const homeLink = document.getElementById('home')
-  if (!homeLink) return
-
-  const homeText = homeLink.innerHTML
-  charHomeTextArray = homeText.split('')
-
-  changeText()
 }
 
 if (document.readyState === 'loading') {
@@ -42,6 +36,7 @@ if (document.readyState === 'loading') {
   initBlog()
 }
 
-async function changeText() {
-  console.log(charHomeTextArray)
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
+
