@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function d(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=d(e);fetch(e.href,t)}})();const p="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png";document.querySelector("#app").innerHTML=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png";document.querySelector("#app").innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -137,6 +137,6 @@
       <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
     </div>
   </footer>
-`;document.getElementById("cat").src=p;const o=document.createElement("div");o.classList.add("toast");o.innerHTML=`
+`;document.getElementById("cat").src=i;const t=document.createElement("div");t.classList.add("toast");t.innerHTML=`
   <p>Copied to clipboard</p>
-`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function u(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await u(2e3),o.classList.remove("active")};function h(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",h);
+`;const c=document.getElementById("app");c.appendChild(t);const a=document.getElementsByClassName("mail")[0],s=document.getElementsByClassName("mail")[1];function l(e){return new Promise(n=>setTimeout(n,e))}const o=async()=>{t.classList.add("active"),await l(2e3),t.classList.remove("active")};function r(){let e=a.innerHTML;navigator.clipboard.writeText(e),o()}function d(){let e=s.innerHTML;navigator.clipboard.writeText(e),o()}s.addEventListener("click",d);a.addEventListener("click",r);
