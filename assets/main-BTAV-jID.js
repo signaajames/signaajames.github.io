@@ -6,6 +6,7 @@
 
   <div class='navigation'>
     <section class='navigations'>
+      <a class='hrefs' href="/blog">Blog</a>
       <a class='hrefs' href="#about">About</a>
       <a class='hrefs' href="#skills">Skills</a>
       <a class='hrefs' href="#projects">Projects</a>
@@ -16,7 +17,7 @@
     <img id='cat' src="">
 
   <div class='content'>
-    <p id='sub'>Chrome/firefox based browsers recommended & default zoom (100%), anything more might cause issues or block text & computer recommended instead of phone</p>
+    <p id='sub'>Chrome/firefox based browsers recommended & default zoom (60-100%), anything more might cause issues or block text & computer recommended instead of phone</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
       <h3>GMT+8</h3>
