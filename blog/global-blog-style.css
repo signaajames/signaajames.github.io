@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 40px 16px 80px;
+  padding: 0 16px 80px;
   background-color: #000;
   color: #f5f5f5;
   font-family: Lato, Arial, sans-serif;
@@ -11,6 +11,7 @@ body {
 
 .post-frame {
   width: min(100%, 80%);
+  padding-top: 40px
 }
 
 .post-top {

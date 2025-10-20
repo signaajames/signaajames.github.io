@@ -1,5 +1,6 @@
 import './style.css'
 import cat from './Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview.png'
+import catinerSS from './catinerSS.png'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <div class='header'>
@@ -85,7 +86,12 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section id='projects'>
       <h1>Projects</h1>
       <section class='content-section'>
-
+        <div class='projectCard'>
+          <img src="" alt="" class='projectImg'>
+          <p class='projectName'>Catinder</p>
+          <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
+          <a href="https://github.com/signaajames/Catinder" class='projectUrl'></a>
+        </div>
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -182,3 +188,7 @@ function copyMal2() {
 
 myMailAddress2.addEventListener('click', copyMal2)
 myMailAddress.addEventListener('click', copyMal)
+
+let projectImg = document.getElementsByClassName('projectImg')[0]
+
+projectImg.src = catinerSS
