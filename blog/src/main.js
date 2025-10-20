@@ -1,3 +1,5 @@
+import '../style.css'
+
 document.addEventListener('DOMContentLoaded', () => {
   const blog = document.querySelector('#blog')
   blog.innerHTML = `

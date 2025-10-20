@@ -1,0 +1,18 @@
+:root {
+  font-family: Lato, Arial, sans-serif;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x:hidden;
+
+}
