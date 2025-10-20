@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/portfolio1/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png";document.querySelector("#app").innerHTML=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";const i=""+new URL("Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png",import.meta.url).href;document.querySelector("#app").innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
