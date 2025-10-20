@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png";document.querySelector("#app").innerHTML=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png",c="/assets/catinerSS-D_MZzIHf.png";document.querySelector("#app").innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -81,8 +81,15 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_I
     <!-- -->
     <section id='projects'>
       <h1>Projects</h1>
-      <section class='content-section'>
-
+      <section class='content-section projects-grid'>
+        <article class='projectCard'>
+          <img src="" alt="Screenshot of the Catinder project" class='projectImg' loading='lazy'>
+          <div class='projectDetails'>
+            <p class='projectName'>Catinder</p>
+            <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
+            <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+          </div>
+        </article>
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -139,4 +146,4 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_I
   </footer>
 `;document.getElementById("cat").src=i;const t=document.createElement("div");t.classList.add("toast");t.innerHTML=`
   <p>Copied to clipboard</p>
-`;const c=document.getElementById("app");c.appendChild(t);const a=document.getElementsByClassName("mail")[0],s=document.getElementsByClassName("mail")[1];function l(e){return new Promise(n=>setTimeout(n,e))}const o=async()=>{t.classList.add("active"),await l(2e3),t.classList.remove("active")};function r(){let e=a.innerHTML;navigator.clipboard.writeText(e),o()}function d(){let e=s.innerHTML;navigator.clipboard.writeText(e),o()}s.addEventListener("click",d);a.addEventListener("click",r);
+`;const r=document.getElementById("app");r.appendChild(t);const a=document.getElementsByClassName("mail")[0],s=document.getElementsByClassName("mail")[1];function l(e){return new Promise(n=>setTimeout(n,e))}const o=async()=>{t.classList.add("active"),await l(2e3),t.classList.remove("active")};function d(){let e=a.innerHTML;navigator.clipboard.writeText(e),o()}function p(){let e=s.innerHTML;navigator.clipboard.writeText(e),o()}s.addEventListener("click",p);a.addEventListener("click",d);let m=document.getElementsByClassName("projectImg")[0];m.src=c;
