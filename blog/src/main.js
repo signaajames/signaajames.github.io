@@ -25,6 +25,13 @@ const initBlog = () => {
             <p class='shortContent'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro rem eius esse repellat veniam excepturi vitae totam. Autem voluptatum earum debitis iure aperiam molestias, neque eveniet quam officia, quidem necessitatibus?</p>
             <a class='readMore' href='./Lorem-ipsum'>Read more...</a>
         </div>
+
+        <div class='BlogCard'>
+            <h2>Choosing Linux Distros by Category</h2>
+            <p class='date'>October 26, 2025</p>
+            <p class='shortContent'></p>
+            <a class='readMore' href='./choosing-a-linux-distro'>Read more...</a>
+        </div>
     </div>
   `
 

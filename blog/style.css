@@ -67,6 +67,8 @@ p {
   width: min(100%, 1200px);
   margin: 50px auto;
   display: flex;
+  gap: 50px;
+  justify-content: center;
 }
 
 .seperator {
@@ -81,7 +83,7 @@ p {
     padding: 12px;
     padding-left: 24px;
     padding-right: 24px;
-    width: 400px;
+    width: 406px;
     height: 400px;
     border-radius: 16px;
     border: #262626 1px solid;

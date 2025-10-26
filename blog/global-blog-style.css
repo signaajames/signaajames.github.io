@@ -11,7 +11,7 @@ body {
 
 .post-frame {
   width: min(100%, 80%);
-  padding-top: 40px
+  padding-top: 40px;
 }
 
 .post-top {
@@ -96,7 +96,7 @@ body {
 
 .post-content h2,
 .post-content h3 {
-  margin: 12px 0 8px;
+  margin: 12px 0 -10px;
   color: #f5f5f5;
 }
 
@@ -104,7 +104,7 @@ blockquote {
   margin: 0;
   padding: 18px 26px;
   background-color: rgba(38, 38, 38, 0.45);
-  border-left: 3px solid #3f7dff;
+  border-left: 3px solid #cacaca;
   border-radius: 6px;
   color: #dcdcdc;
   font-style: italic;
@@ -122,4 +122,20 @@ blockquote {
   .post-meta {
     gap: 8px;
   }
+}
+
+.Italic {
+  font-style: italic;
+  color: #bdbdbd;
+}
+
+.display {
+  width: 700px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+li {
+  margin-left: 50px;
+  color: #a1a1a1;
 }
