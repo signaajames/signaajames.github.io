@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function d(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=d(e);fetch(e.href,t)}})();const p="/assets/catinerSS-D_MZzIHf.png";document.querySelector("#app").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function i(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=i(e);fetch(e.href,t)}})();const n="/assets/catinerSS-D_MZzIHf.png";document.querySelector("#app").innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -14,10 +14,9 @@
   </div>
 
   <div class='content'>
-    <p id='sub'>computer recommended instead of phone</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
-      <h3>GMT+8</h3>
+      <h3>UTC+8</h3>
       <p>
         Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
       </p>
@@ -38,9 +37,9 @@
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy. I mainly work on web projects.
+          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
 
-          I currently use Windows 10 since my computer doesn’t support Windows 11, but I’ve also started dual booting into Linux to learn about it a little bit.
+          I'm more of a back-end developer since CSS isn't my strong suit, though I can still use it.
 
           I eventually want to find a team, start a company, and keep building cool things.
         </p>
@@ -59,15 +58,12 @@
         <section class='skill-list'>
           <div class='skillCard'>HTML</div>
           <div class='skillCard'>JavaScript</div>
-          <div class='skillCard'>React</div>
-        </section>
-        <h3>Styling</h3>
-        <section class='skill-list'>
           <div class='skillCard'>CSS</div>
         </section>
-        <h3>Other</h3>
+        <h3>Tools</h3>
         <section class='skill-list'>
           <div class='skillCard'>Git</div>
+          <div class='skillCard'>Vite</div>
         </section>
       </section>
     </section> <!-- end of experience section -->
@@ -100,7 +96,7 @@
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
-        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail'>penguingnop@gmail.com</span></p>
+        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a> or <a class='mail' href="mailto:penguingnop@gmail.com">penguingnop@gmail.com</a></p>
         <!-- <form class='contact-form'>
           <label class='contact-label' for='contactName'>Name</label>
           <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
@@ -144,6 +140,4 @@
       <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
     </div>
   </footer>
-`;const o=document.createElement("div");o.classList.add("toast");o.innerHTML=`
-  <p>Copied to clipboard</p>
-`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function h(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await h(2e3),o.classList.remove("active")};function u(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",u);let g=document.getElementsByClassName("projectImg")[0];g.src=p;
+`;document.getElementById("app");let c=document.getElementsByClassName("projectImg")[0];c.src=n;
