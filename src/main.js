@@ -62,15 +62,12 @@ document.querySelector('#app').innerHTML = /*html*/`
         <section class='skill-list'>
           <div class='skillCard'>HTML</div>
           <div class='skillCard'>JavaScript</div>
-          <div class='skillCard'>React</div>
-        </section>
-        <h3>Styling</h3>
-        <section class='skill-list'>
           <div class='skillCard'>CSS</div>
         </section>
-        <h3>Other</h3>
+        <h3>Tools</h3>
         <section class='skill-list'>
           <div class='skillCard'>Git</div>
+          <div class='skillCard'>Vite</div>
         </section>
       </section>
     </section> <!-- end of experience section -->
