@@ -88,7 +88,10 @@ document.querySelector('#app').innerHTML = /*html*/`
           <div class='projectDetails'>
             <p class='projectName'>Catinder</p>
             <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
-            <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+            <section id='aButtons'>
+              <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+              <a href="https://signaajames.github.io/catinder/" class='projectUrl' target='_blank' rel='noopener noreferrer'>View now</a>
+            </section>
           </div>
         </article>
       </section>
