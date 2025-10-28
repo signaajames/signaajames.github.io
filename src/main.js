@@ -22,7 +22,7 @@ document.querySelector('#app').innerHTML = /*html*/`
       <h1>I like cats & code.</h1>
       <h3>UTC+8</h3>
       <p>
-        Back-end and front-end engineer building simple, well organized code and interfaces.
+        Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
       </p>
       <section class='buttons'>
         <a href="#projects">
@@ -37,18 +37,22 @@ document.querySelector('#app').innerHTML = /*html*/`
     <div class='seperator'></div> <!-- seperator -->
     
     <!-- -->
-    <!-- <section id='about'>
+    <section id='about'>
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          Hi, I’m Signaa James. I'm a back-end and front-end engineer, though I focus more on back-end. I have under one year of experience and I try to focus on performance, simplicity, and clean code.
+          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
+
+          I'm more of a back-end developer since CSS isn't my strong suit, though I can still use it.
+
+          I eventually want to find a team, start a company, and keep building cool things.
         </p>
 
       </section>
-    </section> -->
+    </section><!-- end of about section -->
     <!-- -->
     
-    <!-- <div class='seperator' style='height: 2px;'></div> seperator -->
+    <div class='seperator' style='height: 2px;'></div> <!-- seperator -->
     
     <!-- -->
     <section id='skills'>
