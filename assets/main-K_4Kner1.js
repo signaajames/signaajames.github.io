@@ -84,7 +84,10 @@
           <div class='projectDetails'>
             <p class='projectName'>Catinder</p>
             <p class='projectDesc'>Catinder is a small single-page web app I started as a project after watching the first few seconds of that one project video from "The Coding Sloth" on Youtube. It’s a Vite-based prototype inspired by the idea of swiping through cat profiles.</p>
-            <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+            <section id='aButtons'>
+              <a href="https://github.com/signaajames/Catinder" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+              <a href="https://signaajames.github.io/catinder/" class='projectUrl' target='_blank' rel='noopener noreferrer'>View now</a>
+            </section>
           </div>
         </article>
       </section>
@@ -143,4 +146,4 @@
   </footer>
 `;const o=document.createElement("div");o.classList.add("toast");o.innerHTML=`
   <p>Copied to clipboard</p>
-`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function u(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await u(2e3),o.classList.remove("active")};function h(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",h);let g=document.getElementsByClassName("projectImg")[0];g.src=p;
+`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function h(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await h(2e3),o.classList.remove("active")};function u(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",u);let g=document.getElementsByClassName("projectImg")[0];g.src=p;
