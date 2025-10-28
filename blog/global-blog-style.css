@@ -9,6 +9,13 @@ body {
   align-items: center;
 }
 
+/* Ensure media scales with the container */
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .post-frame {
   width: min(100%, 80%);
   padding-top: 40px;
@@ -86,6 +93,8 @@ body {
   margin-top: 36px;
   display: grid;
   gap: 24px;
+  /* prevent long content from forcing horizontal scroll */
+  overflow-wrap: anywhere;
 }
 
 .post-content p {
@@ -130,7 +139,8 @@ blockquote {
 }
 
 .display {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   margin-bottom: 10px;
   border-radius: 10px;
 }

@@ -1,11 +1,20 @@
 :root {
   font-family: Lato, Arial, sans-serif;
-
   color: rgba(255, 255, 255, 0.87);
   background-color: #000;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+/* Global sizing + media behavior */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 body {
@@ -19,7 +28,7 @@ body {
 
 
 .header {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   line-height: 20px;
   position: sticky;
@@ -66,8 +75,10 @@ p {
 .content {
   width: min(100%, 1200px);
   margin: 50px auto;
+  padding: 0 16px; /* room at the edges */
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap; /* allow cards to wrap on small screens */
+  gap: 24px;
   justify-content: center;
 }
 
@@ -80,10 +91,8 @@ p {
 
 .BlogCard {
     background-color: #0A0A0A;
-    padding: 12px;
-    padding-left: 24px;
-    padding-right: 24px;
-    width: 406px;
+    padding: 12px 24px;
+    width: min(100%, 406px);
     height: 400px;
     border-radius: 16px;
     border: #262626 1px solid;

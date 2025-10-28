@@ -8,6 +8,17 @@
   text-rendering: optimizeLegibility;
 }
 
+/* Global sizing + base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -22,7 +33,7 @@ body {
 } */
 
 .header {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   line-height: 20px;
   position: sticky;
@@ -70,6 +81,7 @@ p {
   min-height: 100vh;
   width: min(100%, 1200px);
   margin: 50px auto;
+  padding: 0 16px; /* side padding on small screens */
   text-align: left;
 }
 
@@ -187,11 +199,12 @@ p {
 .skill-list {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .skillCard {
   background-color: rgb(0, 0, 0);
-  height: 20px;
+  height: 100%;
   width: fit-content;
   border: #262626 2px solid;
   border-radius: 5px;
@@ -332,8 +345,9 @@ section {
 .projects-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 460px));
-  justify-content: flex-start;
+  /* narrower, centered cards that wrap */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
+  justify-content: center;
 }
 
 .projectCard {
@@ -371,7 +385,7 @@ section {
 .projectDesc {
   margin: 0;
   color: #a1a1a1;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
 
