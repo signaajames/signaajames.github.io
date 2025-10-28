@@ -22,7 +22,7 @@ document.querySelector('#app').innerHTML = /*html*/`
       <h1>I like cats & code.</h1>
       <h3>UTC+8</h3>
       <p>
-        Back-end and front-end engineer focusing on creating simple, performant code and UI.
+        Back-end and front-end engineer focused on creating simple, performant code and UI.
       </p>
       <section class='buttons'>
         <a href="#projects">
