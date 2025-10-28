@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview-DYzrqpy7.png",c="/assets/catinerSS-D_MZzIHf.png";document.querySelector("#app").innerHTML=`
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function d(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=d(e);fetch(e.href,t)}})();const p="/assets/catinerSS-D_MZzIHf.png";document.querySelector("#app").innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -6,7 +6,6 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_I
 
   <div class='navigation'>
     <section class='navigations'>
-      <a class='hrefs' href="/blog">Blog</a>
       <a class='hrefs' href="#about">About</a>
       <a class='hrefs' href="#skills">Skills</a>
       <a class='hrefs' href="#projects">Projects</a>
@@ -14,10 +13,8 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_I
     </section>
   </div>
 
-    <img id='cat' src="">
-
   <div class='content'>
-    <p id='sub'>Chrome/firefox based browsers recommended & default zoom (60-100%), anything more might cause issues or block text & computer recommended instead of phone</p>
+    <p id='sub'>computer recommended instead of phone</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
       <h3>GMT+8</h3>
@@ -144,6 +141,6 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";const i="/assets/Gemini_Generated_I
       <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
     </div>
   </footer>
-`;document.getElementById("cat").src=i;const t=document.createElement("div");t.classList.add("toast");t.innerHTML=`
+`;const o=document.createElement("div");o.classList.add("toast");o.innerHTML=`
   <p>Copied to clipboard</p>
-`;const r=document.getElementById("app");r.appendChild(t);const a=document.getElementsByClassName("mail")[0],s=document.getElementsByClassName("mail")[1];function l(e){return new Promise(n=>setTimeout(n,e))}const o=async()=>{t.classList.add("active"),await l(2e3),t.classList.remove("active")};function d(){let e=a.innerHTML;navigator.clipboard.writeText(e),o()}function p(){let e=s.innerHTML;navigator.clipboard.writeText(e),o()}s.addEventListener("click",p);a.addEventListener("click",d);let m=document.getElementsByClassName("projectImg")[0];m.src=c;
+`;const m=document.getElementById("app");m.appendChild(o);const c=document.getElementsByClassName("mail")[0],r=document.getElementsByClassName("mail")[1];function u(a){return new Promise(s=>setTimeout(s,a))}const l=async()=>{o.classList.add("active"),await u(2e3),o.classList.remove("active")};function h(){let a=c.innerHTML;navigator.clipboard.writeText(a),l()}function f(){let a=r.innerHTML;navigator.clipboard.writeText(a),l()}r.addEventListener("click",f);c.addEventListener("click",h);let g=document.getElementsByClassName("projectImg")[0];g.src=p;
