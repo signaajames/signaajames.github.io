@@ -18,10 +18,9 @@ document.querySelector('#app').innerHTML = /*html*/`
   </div>
 
   <div class='content'>
-    <p id='sub'>computer recommended instead of phone</p>
     <section id='hero'>
       <h1>I like cats & code.</h1>
-      <h3>GMT+8</h3>
+      <h3>UTC+8</h3>
       <p>
         Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean, performant products, code, and visuals.
       </p>
@@ -104,7 +103,7 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
-        <p>Contact at <span class='mail'>SignaaJames@proton.me</span> or <span class='mail'>penguingnop@gmail.com</span></p>
+        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a> or <a class='mail' href="mailto:penguingnop@gmail.com">penguingnop@gmail.com</a></p>
         <!-- <form class='contact-form'>
           <label class='contact-label' for='contactName'>Name</label>
           <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
@@ -150,44 +149,12 @@ document.querySelector('#app').innerHTML = /*html*/`
   </footer>
 `
 
-const toast = document.createElement('div')
-toast.classList.add('toast')
-toast.innerHTML = /*html*/`
-  <p>Copied to clipboard</p>
-`
-
 const app = document.getElementById('app')
 
-app.appendChild(toast)
-
-const myMailAddress = document.getElementsByClassName('mail')[0]
-const myMailAddress2 = document.getElementsByClassName('mail')[1]
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-const showToast = async () => {
-  toast.classList.add('active')
-  await delay(2000)
-  toast.classList.remove('active')
-
-}
-
-function copyMal() {
-  let textToCopy = myMailAddress.innerHTML
-  navigator.clipboard.writeText(textToCopy)
-  showToast()
-}
-
-function copyMal2() {
-  let textToCopy = myMailAddress2.innerHTML
-  navigator.clipboard.writeText(textToCopy)
-  showToast()
-}
-
-myMailAddress2.addEventListener('click', copyMal2)
-myMailAddress.addEventListener('click', copyMal)
 
 let projectImg = document.getElementsByClassName('projectImg')[0]
 

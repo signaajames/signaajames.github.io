@@ -40,7 +40,7 @@ body {
   top: 0;
   border-bottom: #262626 1px solid;
   background-color: rgba(0, 0, 0, 0.276);
-  backdrop-filter: blur(5px); /* blur behind the header */
+  backdrop-filter: blur(4px); /* blur behind the header */
   z-index: 10000;
   padding-top: 1px;
 }
