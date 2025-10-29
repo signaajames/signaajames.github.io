@@ -2,7 +2,9 @@ import './style.css'
 import cat from './Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview.png'
 import catinerSS from './catinerSS.png'
 
-document.querySelector('#app').innerHTML = /*html*/`
+const app = document.getElementById('app')
+
+app.innerHTML = /*html*/`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -146,14 +148,6 @@ document.querySelector('#app').innerHTML = /*html*/`
   </footer>
 `
 
-const app = document.getElementById('app')
-
-
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 let projectImg = document.getElementsByClassName('projectImg')[0]
-
 projectImg.src = catinerSS
 

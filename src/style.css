@@ -251,17 +251,17 @@ section {
 .footer {
   width: 100%;
   margin: 80px 0 0;
-  padding: 48px 24px;
+  padding: 48px 4px;
   background: #0a0a0a;
   border-top: 1px solid #1f1f1f;
 }
 
 .footer-top {
-  width: min(100%, 1200px);
+  width: min(100%, 1000px);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 40px;
+  gap: 24px 0px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -308,7 +308,7 @@ section {
 }
 
 .footer-meta {
-  width: min(100%, 1200px);
+  width: min(100%, 1000px);
   margin: 32px auto 0;
   border-top: 1px solid #1f1f1f;
   padding-top: 18px;
@@ -422,4 +422,4 @@ section {
   gap: 20px;
   padding: 5px;
   justify-content: center;
-}
+} 
