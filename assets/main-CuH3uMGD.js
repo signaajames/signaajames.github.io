@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function i(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=i(e);fetch(e.href,t)}})();const n="/assets/catinerSS-D_MZzIHf.png",c=document.getElementById("app");c.innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const i="/assets/catinerSS-D_MZzIHf.png",n="/assets/Screenshot%202025-11-18%20at%2012-36-50%20forum-BIvE-K1-.png",c=document.getElementById("app");c.innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
@@ -86,6 +86,19 @@
             </section>
           </div>
         </article>
+
+        <article class='projectCard'>
+          <img src="" alt="Screenshot of the forum project" class='projectImg' loading='lazy'>
+          <div class='projectDetails'>
+            <p class='projectName'>Forum</p>
+            <p class='projectDesc'>Forum is a simple light weight web app. You have to enter codes to get to certain forums similar to an invite. Everything is open, even my discord webhook so please don't mass ping me.</p>
+            <section id='aButtons'>
+              <a href="https://github.com/signaajames/forum" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+              <a href="https://signaajames.github.io/forum/" class='projectUrl' target='_blank' rel='noopener noreferrer'>View now</a>
+            </section>
+          </div>
+        </article>
+
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -140,4 +153,4 @@
       <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
     </div>
   </footer>
-`;let r=document.getElementsByClassName("projectImg")[0];r.src=n;
+`;let l=document.getElementsByClassName("projectImg")[0],d=document.getElementsByClassName("projectImg")[1];l.src=i;d.src=n;
