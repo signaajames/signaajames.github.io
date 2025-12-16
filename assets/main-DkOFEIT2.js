@@ -109,7 +109,7 @@
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
-        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a> or <a class='mail' href="mailto:penguingnop@gmail.com">penguingnop@gmail.com</a></p>
+        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a></p>
         <!-- <form class='contact-form'>
           <label class='contact-label' for='contactName'>Name</label>
           <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
