@@ -6,7 +6,7 @@ This is my portfolio, built with vanilla JavaScript, Vite, and custom CSS.
 
 ## Getting Started
 
-You will need a newer version of Node, I'm using v22.18.0. I can't say for sure if older/newer versions will work though, but v22... should work.
+You will need a newer version of Node, I'm using v22.18.0. I can't say for sure if older/newer versions will work though, but v22... should work. All that I think matters are the packages
 
 ```bash
 npm install

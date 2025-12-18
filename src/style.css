@@ -19,6 +19,10 @@ img, picture, video, canvas, svg {
   display: block;
 }
 
+img {
+  height: 200px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -35,14 +39,34 @@ body {
 .header {
   width: 100%;
   text-align: center;
-  line-height: 20px;
   position: sticky;
   top: 0;
   border-bottom: #262626 1px solid;
-  background-color: rgba(0, 0, 0, 0.276);
-  backdrop-filter: blur(4px); /* blur behind the header */
-  z-index: 10000;
-  padding-top: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: saturate(0%) blur(4px); /* blur behind the header */
+  z-index: 67;
+  padding: 5px 0;
+}
+
+.header h2 {
+  margin: 3px 0 0;
+}
+
+.header .bio {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+}
+
+.header-socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 7px 0;
+}
+
+.header-social-link {
+  display: inline-flex;
+  align-items: center;
 }
 
 p {
@@ -55,10 +79,10 @@ p {
   display: flex;
   border-bottom: #262626 1px solid;
   background-color: #0A0A0A;
-  height: 50px;
+  height: 40px;
   align-items: center;
-  ;
 }
+
 
 .navigations {
   display: flex;
@@ -286,7 +310,8 @@ section {
 }
 
 .footer-nav a,
-.footer-link {
+.footer-link,
+.header-social-link {
   color: #a9a9a9;
   text-decoration: none;
   font-size: 0.93rem;
@@ -294,16 +319,22 @@ section {
 }
 
 .footer-nav a:hover,
-.footer-link:hover {
+.footer-link:hover,
+.header-social-link:hover {
   color: #ffffff;
 }
 
-.footer-link svg {
+.footer-link svg,
+.header-social-link svg {
   vertical-align: middle;
   margin-right: 6px;
 }
 
 #github {
+  color: inherit;
+}
+
+#twitter {
   color: inherit;
 }
 

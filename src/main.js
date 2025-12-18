@@ -1,12 +1,32 @@
 import './style.css'
 import cat from './Gemini_Generated_Image_ee6xbree6xbree6x-removebg-preview.png'
 import catinerSS from './catinerSS.png'
+import forum from './Screenshot 2025-11-18 at 12-36-50 forum.png'
 
 const app = document.getElementById('app')
 
 app.innerHTML = /*html*/`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
+    <!-- Cloned socials from footer, shown in header -->
+    <section class='header-socials'>
+      <a href='mailto:SignaaJames@proton.me' class='header-social-link' aria-label='Email Signaa James'>
+        <svg id='mail' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+      <a href='https://github.com/signaajames' class='header-social-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
+        <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
+          <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
+        </svg>
+      </a>
+      <a href='https://x.com/SignaaJame' class='header-social-link' target='_blank' rel='noreferrer' aria-label='X/Twitter profile'>
+        <svg id='twitter' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+        </svg>
+      </a>
+    </section>
     <p class='bio'>Back-end Engineer & Front-end Engineer</p>
   </div>
 
@@ -65,8 +85,9 @@ app.innerHTML = /*html*/`
           <div class='skillCard'>HTML</div>
           <div class='skillCard'>JavaScript</div>
           <div class='skillCard'>CSS</div>
+          <div class='skillCard'>React</div>
         </section>
-        <h3>Tools</h3>
+        <h3>Build & Tools</h3>
         <section class='skill-list'>
           <div class='skillCard'>Git</div>
           <div class='skillCard'>Vite</div>
@@ -92,6 +113,19 @@ app.innerHTML = /*html*/`
             </section>
           </div>
         </article>
+
+        <article class='projectCard'>
+          <img src="" alt="Screenshot of the forum project" class='projectImg' loading='lazy'>
+          <div class='projectDetails'>
+            <p class='projectName'>Forum</p>
+            <p class='projectDesc'>Forum is a simple light weight web app. You have to enter codes to get to certain forums similar to an invite. Everything is open, even my discord webhook so please don't mass ping me.</p>
+            <section id='aButtons'>
+              <a href="https://github.com/signaajames/forum" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
+              <a href="https://signaajames.github.io/forum/" class='projectUrl' target='_blank' rel='noopener noreferrer'>View now</a>
+            </section>
+          </div>
+        </article>
+
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -102,7 +136,7 @@ app.innerHTML = /*html*/`
     <section id='contact'>
       <h1>Contact</h1>
       <section class='content-section'>
-        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a> or <a class='mail' href="mailto:penguingnop@gmail.com">penguingnop@gmail.com</a></p>
+        <p>Contact at <a class='mail' href="mailto:SignaaJames@proton.me">SignaaJames@proton.me</a></p>
         <!-- <form class='contact-form'>
           <label class='contact-label' for='contactName'>Name</label>
           <input class='contact-input' type='text' name='name' id='contactName' placeholder='Your name' required>
@@ -133,13 +167,20 @@ app.innerHTML = /*html*/`
       </nav>
       <div class='footer-social'>
         <a href='mailto:SignaaJames@proton.me' class='footer-link' aria-label='Email Signaa James'>
-          Email
+          <svg id='mail' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+            </path><polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
         </a>
         <a href='https://github.com/signaajames' class='footer-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
           <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
             <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
           </svg>
         </a>
+        <a href='https://x.com/SignaaJame' class='footer-link' target='_blank' rel='noreferrer' aria-label='X/Twitter profile'>
+          <svg id='twitter' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>  
       </div>
     </section>
     <div class='footer-meta'>
@@ -149,5 +190,8 @@ app.innerHTML = /*html*/`
 `
 
 let projectImg = document.getElementsByClassName('projectImg')[0]
+let projectImg2 = document.getElementsByClassName('projectImg')[1]
 projectImg.src = catinerSS
+projectImg2.src = forum
+
 
