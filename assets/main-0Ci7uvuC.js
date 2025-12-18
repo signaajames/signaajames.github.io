@@ -56,7 +56,7 @@
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          I’m Signaa James (or Pgnop), a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
+          I’m Signaa James, a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
 
           I'm more of a back-end developer since CSS isn't my strong suit, though I can still use it.
 
