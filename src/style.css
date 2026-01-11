@@ -91,7 +91,7 @@ p {
 
 .content {
   min-height: 100vh;
-  width: min(100%, 1200px);
+  width: min(100%, 1100px);
   margin: 50px auto;
   padding: 0 16px; /* side padding on small screens */
   text-align: left;
