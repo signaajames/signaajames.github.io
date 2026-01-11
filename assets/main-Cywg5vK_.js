@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&o(a)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const i="/assets/catinerSS-D_MZzIHf.png",c="/assets/Screenshot%202025-11-18%20at%2012-36-50%20forum-BIvE-K1-.png",n=document.getElementById("app");n.innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const i="/assets/catinerSS-D_MZzIHf.png",n="/assets/Screenshot%202025-11-18%20at%2012-36-50%20forum-BIvE-K1-.png",c=document.getElementById("app");c.innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
     <p class='bio'>Backend & Frontend Engineer</p>
@@ -19,7 +19,7 @@
       <div class='hero-text'>
         <h1>I like cats & code.</h1>
         <h3 id='timezone'>UTC+8</h3>
-        <p>I like making web apps and stuff</p>
+        <p>System32 backup. Please do not delete.</p>
       </div>
 
       <section class='hero-buttons'>
@@ -39,10 +39,13 @@
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          I'm more of a backend developer since CSS is pretty hard for me as of.. writing this lol, though I still do it anyways.
-          <br>
-          <br>
-          What do I even say?
+        I build the parts of the internet you don’t see (cause I don't build parts of the internet.. not yet though)
+        <br>
+        <br>
+        I’m more of a backend developer because I prefer logic and data over fighting with flexbox and weird sizing
+        <br>
+        <br>
+        But I’m not a 'not my job' developer, I still write the CSS when the project needs it, even if I complain about it the whole time. I care more about the app actually working than making it look pretty, but I make sure it does both. Though the codebase ends up looking like cold sphagetti
         </p>
 
       </section>
@@ -147,7 +150,7 @@
       </div>
     </section>
     <div class='footer-meta'>
-      <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
+      <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved... or are they?</span>
     </div>
   </footer>
-`;let l=document.getElementsByClassName("projectImg")[0],d=document.getElementsByClassName("projectImg")[1];l.src=i;d.src=c;
+`;let l=document.getElementsByClassName("projectImg")[0],d=document.getElementsByClassName("projectImg")[1];l.src=i;d.src=n;
