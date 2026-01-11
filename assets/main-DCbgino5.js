@@ -1,27 +1,7 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const i="/assets/catinerSS-D_MZzIHf.png",n="/assets/Screenshot%202025-11-18%20at%2012-36-50%20forum-BIvE-K1-.png",c=document.getElementById("app");c.innerHTML=`
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&o(a)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const i="/assets/catinerSS-D_MZzIHf.png",c="/assets/Screenshot%202025-11-18%20at%2012-36-50%20forum-BIvE-K1-.png",n=document.getElementById("app");n.innerHTML=`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
-    <!-- Cloned socials from footer, shown in header -->
-    <!-- <section class='header-socials'>
-      <a href='mailto:SignaaJames@proton.me' class='header-social-link' aria-label='Email Signaa James'>
-        <svg id='mail' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-      </a>
-      <a href='https://github.com/signaajames' class='header-social-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
-        <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
-          <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
-        </svg>
-      </a>
-      <a href='https://x.com/SignaaJame' class='header-social-link' target='_blank' rel='noreferrer' aria-label='X/Twitter profile'>
-        <svg id='twitter' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
-          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-      </a>
-      -->
-    </section>
-    <p class='bio'>Back-end Engineer & Front-end Engineer</p>
+    <p class='bio'>Backend & Frontend Engineer</p>
   </div>
 
   <div class='navigation'>
@@ -30,18 +10,19 @@
       <a class='hrefs' href="#skills">Skills</a>
       <a class='hrefs' href="#projects">Projects</a>
       <a class='hrefs' href="#contact">Contact</a>
-      <a class='hrefs' href="#contact">Socials</a>
+      <a class='hrefs' href="#footer">Socials</a>
     </section>
   </div>
 
   <div class='content'>
     <section id='hero'>
-      <h1>I like cats & code.</h1>
-      <h3>UTC+8</h3>
-      <p>
-        Hi, I'm Signaa James, mainly a back-end developer focused on learning & creating minimalist, clean products, code, and UI.
-      </p>
-      <section class='buttons'>
+      <div class='hero-text'>
+        <h1>I like cats & code.</h1>
+        <h3 id='timezone'>UTC+8</h3>
+        <p>I like making web apps and stuff</p>
+      </div>
+
+      <section class='hero-buttons'>
         <a href="#projects">
           <button id='projectBtn'>View Projects</button>
         </a>
@@ -58,11 +39,10 @@
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          I’m Signaa James, a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
-
-          I'm more of a back-end developer since CSS isn't my strong suit, though I can still use it.
-
-          I eventually want to find a team, start a company, and keep building cool things.
+          I'm more of a backend developer since CSS is pretty hard for me as of.. writing this lol, though I still do it anyways.
+          <br>
+          <br>
+          What do I even say?
         </p>
 
       </section>
@@ -109,18 +89,6 @@
           </div>
         </article>
 
-        <article class='projectCard'>
-          <img src="" alt="Screenshot of the forum project" class='projectImg' loading='lazy'>
-          <div class='projectDetails'>
-            <p class='projectName'>Forum</p>
-            <p class='projectDesc'>Forum is a simple light weight web app. You have to enter codes to get to certain forums similar to an invite. Everything is open, even my discord webhook so please don't mass ping me.</p>
-            <section id='aButtons'>
-              <a href="https://github.com/signaajames/forum" class='projectUrl' target='_blank' rel='noopener noreferrer'>View on GitHub</a>
-              <a href="https://signaajames.github.io/forum/" class='projectUrl' target='_blank' rel='noopener noreferrer'>View now</a>
-            </section>
-          </div>
-        </article>
-
       </section>
     </section> <!-- end of projects section -->
     <!-- -->
@@ -149,7 +117,7 @@
     <!-- -->
   </div>
 
-  <footer class='footer'>
+  <footer class='footer' id='footer'>
     <section class='footer-top'>
       <div class='footer-brand'>
         <h2>SignaaJames</h2>
@@ -161,17 +129,17 @@
         <a href='#contact'>Contact</a>
       </nav>
       <div class='footer-social'>
-        <a href='mailto:SignaaJames@proton.me' class='footer-link' aria-label='Email Signaa James'>
+        <a href='mailto:SignaaJames@proton.me' target='_blank' class='footer-link' aria-label='Email Signaa James'>
           <svg id='mail' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
             </path><polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </a>
-        <a href='https://github.com/signaajames' class='footer-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
+        <a href='https://github.com/signaajames' target='_blank'class='footer-link' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
           <svg id='github' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-github'>
             <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
           </svg>
         </a>
-        <a href='https://x.com/SignaaJame' class='footer-link' target='_blank' rel='noreferrer' aria-label='X/Twitter profile'>
+        <a href='https://x.com/SignaaJame' target='_blank'class='footer-link' target='_blank' rel='noreferrer' aria-label='X/Twitter profile'>
           <svg id='twitter' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
             <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
           </svg>
@@ -182,4 +150,4 @@
       <span>&copy; ${new Date().getFullYear()} Signaa James. All rights reserved.</span>
     </div>
   </footer>
-`;let l=document.getElementsByClassName("projectImg")[0],d=document.getElementsByClassName("projectImg")[1];l.src=i;d.src=n;
+`;let l=document.getElementsByClassName("projectImg")[0],d=document.getElementsByClassName("projectImg")[1];l.src=i;d.src=c;
