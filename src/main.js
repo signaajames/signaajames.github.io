@@ -8,8 +8,7 @@ const app = document.getElementById('app')
 app.innerHTML = /*html*/`
   <div class='header'>
     <h2 class='name'>SignaaJames</h2>
-    </section>
-    <p class='bio'>Back-end Engineer & Front-end Engineer</p>
+    <p class='bio'>Backend & Frontend Engineer</p>
   </div>
 
   <div class='navigation'>
@@ -24,12 +23,13 @@ app.innerHTML = /*html*/`
 
   <div class='content'>
     <section id='hero'>
-      <h1>I like cats & code.</h1>
-      <h3 id='timezone'>UTC+8</h3>
-      <p>
-        I'm like making web apps and stuff
-      </p>
-      <section class='buttons'>
+      <div class='hero-text'>
+        <h1>I like cats & code.</h1>
+        <h3 id='timezone'>UTC+8</h3>
+        <p>I like making web apps and stuff</p>
+      </div>
+
+      <section class='hero-buttons'>
         <a href="#projects">
           <button id='projectBtn'>View Projects</button>
         </a>
@@ -46,11 +46,10 @@ app.innerHTML = /*html*/`
       <h1>About</h1>
       <section class='content-section'>
         <p>
-          I’m Signaa James, a back-end and front-end developer who started out self-taught before learning through Codedex and Codecademy.
-
-          I'm more of a back-end developer since CSS isn't my strong suit, though I can still use it.
-
-          I eventually want to find a team, start a company, and keep building cool things.
+          I'm more of a backend developer since CSS is pretty hard for me as of.. writing this lol, though I still do it anyways.
+          <br>
+          <br>
+          What do I even say?
         </p>
 
       </section>
