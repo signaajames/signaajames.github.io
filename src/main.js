@@ -26,7 +26,7 @@ app.innerHTML = /*html*/`
       <div class='hero-text'>
         <h1>I like cats & code.</h1>
         <h3 id='timezone'>UTC+8</h3>
-        <p>System32 backup. Please do not delete.</p>
+        <p>Less than a year of professional and total experience because I started a few months ago</p>
       </div>
 
       <section class='hero-buttons'>
@@ -46,13 +46,10 @@ app.innerHTML = /*html*/`
       <h1>About</h1>
       <section class='content-section'>
         <p>
-        I build the parts of the internet you don’t see (cause I don't build parts of the internet.. not yet though)
+        I build and ship web apps using React or plain Vanilla. I prefer fixing my own mistakes instead of relying on templates or "Claude Copy & Paste", because that’s how I actually learn. Also, I’ve been focusing more on my frontend skills, especially UI/UX because I really suck at it.
         <br>
         <br>
-        I’m more of a backend developer because I prefer logic and data over fighting with flexbox and weird sizing
-        <br>
-        <br>
-        But I’m not a 'not my job' developer, I still write the CSS when the project needs it, even if I complain about it the whole time. I care more about the app actually working than making it look pretty, but I make sure it does both. Though the codebase ends up looking like cold sphagetti
+        Oh btw I live at 1600 Pennsylvania Avenue NW, Washington, DC 20500, United States..
         </p>
 
       </section>
