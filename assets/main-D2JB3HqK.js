@@ -40,9 +40,6 @@
       <section class='content-section'>
         <p>
         I build and ship web apps using React or plain Vanilla. I prefer fixing my own mistakes instead of relying on templates or "Claude Copy & Paste", because that’s how I actually learn. Also, I’ve been focusing more on my frontend skills, especially UI/UX because I really suck at it.
-        <br>
-        <br>
-        Oh btw I live at 1600 Pennsylvania Avenue NW, Washington, DC 20500, United States..
         </p>
 
       </section>
