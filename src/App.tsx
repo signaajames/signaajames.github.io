@@ -4,7 +4,7 @@ import './App.css'
 const App = () => {
   const [showStack, setShowStack] = useState(false);
   // Replace these with your actual image paths or imports
-  const catinerSS = "/assets/catinderv2.png";
+  const catinerSS = "../public/catinderSS.png";
 
   const projects = [
     {
