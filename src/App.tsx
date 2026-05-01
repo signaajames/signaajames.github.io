@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import './App.css'
 
 const App = () => {
+  const [showStack, setShowStack] = useState(false);
   // Replace these with your actual image paths or imports
   const catinerSS = "/assets/catinderv2.png";
 
@@ -47,30 +49,40 @@ const App = () => {
                 </div>
                 </article>
             ))}
-          
           </div>
-        </section>
 
-        <section id="about">
-          <div className="section-label">Stack</div>
-          <div className="about-grid">
-            <div className="about-content">
-              I try to build software wwith robust backend logic and elegant/minimal UI's. and heres like everything i know:
-            </div>
-            <div className="stack-group">
-              <span className="stack-item">React</span>
-              <span className="stack-item">React Native</span>
-              <span className="stack-item">JavaScript</span>
-              <span className="stack-item">Java</span>
-              <span className="stack-item">Lua</span>
-              <span className="stack-item">Tailwind</span>
-              <span className="stack-item">CSS</span>
-              <span className="stack-item">Node.js</span>
-              <span className="stack-item">Vite</span>
-              <span className="stack-item">Git</span>
-              <span className="stack-item">Fabric Api</span>
-            </div>
+          <div className="show-more-container">
+            <button 
+              className="btn-show-more" 
+              onClick={() => setShowStack(!showStack)}
+            >
+              {showStack ? "Show less" : "Show more"}
+            </button>
           </div>
+
+          {showStack && (
+            <div className="stack-reveal">
+              <div className="section-label" style={{ marginTop: '80px', marginBottom: '40px' }}>Stack</div>
+              <div className="about-grid">
+                <div className="about-content">
+                  I try to build software with robust backend logic and elegant/minimal UI's. and heres like everything i know:
+                </div>
+                <div className="stack-group">
+                  <span className="stack-item">React</span>
+                  <span className="stack-item">React Native</span>
+                  <span className="stack-item">JavaScript</span>
+                  <span className="stack-item">Java</span>
+                  <span className="stack-item">Lua</span>
+                  <span className="stack-item">Tailwind</span>
+                  <span className="stack-item">CSS</span>
+                  <span className="stack-item">Node.js</span>
+                  <span className="stack-item">Vite</span>
+                  <span className="stack-item">Git</span>
+                  <span className="stack-item">Fabric Api</span>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         <footer>
