@@ -4,13 +4,12 @@ import './App.css'
 const App = () => {
   const [showStack, setShowStack] = useState(false);
   // Replace these with your actual image paths or imports
-  const catinerSS = "../public/catinderv2.png";
 
   const projects = [
     {
       title: "CatinderV2",
       desc: "The second version of the minimalist cat experiment in swipe-based discovery. Built with Vite and React",
-      image: catinerSS,
+      image: "/catinderv2.png",
       alt: "Catinder Screenshot",
       links: [
         { github: "https://github.com/signaajames/catinderv2" },
