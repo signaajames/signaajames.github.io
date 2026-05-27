@@ -3,7 +3,6 @@ import './App.css'
 
 const App = () => {
   const [showStack, setShowStack] = useState(false);
-  // Replace these with your actual image paths or imports
 
   const projects = [
     {
@@ -16,7 +15,16 @@ const App = () => {
         { live: "https://signaajames.github.io/catinderv2/" }
       ],
     },
-    
+    {
+      title: "Light Butter",
+      desc: "Very minimal journaling mobile app with mood tracking. Built with React Native and TypeScript",
+      image: "/lightbutter.png",
+      alt: "Light butter screenshot",
+      links: [
+        { github: "https://github.com/signaajames/signaajames.github.io" }
+      ]
+    }
+
   ]
 
   return (
@@ -42,17 +50,20 @@ const App = () => {
                   <h3>{project.title}</h3>
                   <p>{project.desc}</p>
                   <div className="project-actions">
-                    <a href={project.links[1].live} target="_blank" rel="noopener noreferrer" className="btn btn-outline">Live Demo</a>
                     <a href={project.links[0].github} target="_blank" rel="noopener noreferrer" className="btn btn-outline">GitHub</a>
+                    {(() => {
+                      const live = project.links.find(l => l.live);
+                      return live ? <a href={live.live} target="_blank" rel="noopener noreferrer" className="btn btn-outline">Live Demo</a> : null;
+                    })()}
                   </div>
                 </div>
-                </article>
+              </article>
             ))}
           </div>
 
           <div className="show-more-container">
-            <button 
-              className="btn-show-more" 
+            <button
+              className="btn-show-more"
               onClick={() => setShowStack(!showStack)}
             >
               {showStack ? "Show less" : "Show more"}
