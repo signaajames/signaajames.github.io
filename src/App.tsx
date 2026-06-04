@@ -11,17 +11,40 @@ const App = () => {
       image: "/catinderv2.png",
       alt: "Catinder Screenshot",
       links: [
-        { github: "https://github.com/signaajames/catinderv2" },
-        { live: "https://signaajames.github.io/catinderv2/" }
+        { 
+          type: "github",
+          url: "https://github.com/signaajames/catinderv2",
+        },
+        { 
+          type: "live",
+          url: "https://signaajames.github.io/catinderv2/" ,
+        }
       ],
     },
     {
-      title: "Light Butter",
-      desc: "Very minimal journaling mobile app with mood tracking. Built with React Native and TypeScript",
-      image: "/lightbutter.png",
-      alt: "Light butter screenshot",
+      title: "NanoGram",
+      desc: "My golden boy, grammar correcting model.. NANOGRAM! Trained with my poor CPU and a lot of patience. CLOSED SOURCE FOR NOW",
+      image: "/NanoGram.png",
+      alt: "NanoGram Screenshot",
       links: [
-        { github: "https://github.com/signaajames/signaajames.github.io" }
+      ]
+    },
+    {
+      title: "Brent-2",
+      desc: "The second generation other purpose Brent(ley) bot, meant to verify users like double counter, specifically for Brentley's disocrd server.",
+      image: "/B2.png",
+      alt: "Brent-2 Screenshot",
+      links: [
+        {
+          type: "github",
+          url: "https://github.com/signaajames/brent-2",
+          label: "Bot"
+        },
+        {
+          type: "github",
+          url: "https://github.com/brenttwo/brenttwo.github.io",
+          label: "Website"
+        }
       ]
     }
 
@@ -50,11 +73,21 @@ const App = () => {
                   <h3>{project.title}</h3>
                   <p>{project.desc}</p>
                   <div className="project-actions">
-                    <a href={project.links[0].github} target="_blank" rel="noopener noreferrer" className="btn btn-outline">GitHub</a>
-                    {(() => {
-                      const live = project.links.find(l => l.live);
-                      return live ? <a href={live.live} target="_blank" rel="noopener noreferrer" className="btn btn-outline">Live Demo</a> : null;
-                    })()}
+                      {project.links.map((link, i) => (
+                        <a
+                        key={i}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline"
+                      >
+                        {link.type === "github"
+                          ? `GitHub${link.label ? ` (${link.label})` : ""}`
+                          : link.type === "live"
+                          ? "Live Demo"
+                          : link.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </article>
@@ -72,23 +105,20 @@ const App = () => {
 
           {showStack && (
             <div className="stack-reveal">
-              <div className="section-label" style={{ marginTop: '80px', marginBottom: '40px' }}>Stack</div>
+              <div className="section-label" style={{ marginTop: '80px', marginBottom: '40px' }}>Stack & About</div>
               <div className="about-grid">
-                <div className="about-content">
-                  I try to build software with robust backend logic and elegant/minimal UI's. and heres like everything i know:
+                <div className="about-content abc">
+                  I started programming in 2025 and mostly build things are useful to me, for friends, or just fun things like catinder. I enjoy making small games and designing bold/minimal interfaces..
                 </div>
                 <div className="stack-group">
                   <span className="stack-item">React</span>
-                  <span className="stack-item">React Native</span>
-                  <span className="stack-item">JavaScript</span>
-                  <span className="stack-item">Java</span>
+                  <span className="stack-item">JS/TS</span>
                   <span className="stack-item">Lua</span>
                   <span className="stack-item">Tailwind</span>
-                  <span className="stack-item">CSS</span>
+                  <span className="stack-item">HTML/CSS</span>
                   <span className="stack-item">Node.js</span>
                   <span className="stack-item">Vite</span>
                   <span className="stack-item">Git</span>
-                  <span className="stack-item">Fabric Api</span>
                 </div>
               </div>
             </div>
