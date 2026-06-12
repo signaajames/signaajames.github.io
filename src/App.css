@@ -133,7 +133,6 @@ section {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  border-radius: 4px;
   transition: all var(--transition-fast);
   cursor: pointer;
 }
@@ -171,11 +170,13 @@ section {
 }
 
 .stack-item {
-  font-size: 1.3rem;
+  padding: 12px 20px;
+  font-size: 0.8rem;
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  padding: 6px 18px;
   height: fit-content;
   width: fit-content;
 
@@ -246,11 +247,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--muted);
+  border-bottom: 1px solid transparent;
 }
 
 .social-links a:hover {
   color: var(--fg);
   opacity: 1;
+  border-bottom: 1px solid var(--fg);
+
 }
 
 @media (max-width: 1000px) {
