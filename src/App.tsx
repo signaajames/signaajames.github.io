@@ -22,14 +22,6 @@ const App = () => {
       ],
     },
     {
-      title: "NanoGram",
-      desc: "My golden boy, grammar correcting model.. NANOGRAM! Trained with my poor CPU and a lot of patience. CLOSED SOURCE FOR NOW",
-      image: "/NanoGram.png",
-      alt: "NanoGram Screenshot",
-      links: [
-      ]
-    },
-    {
       title: "Brent-2",
       desc: "The second generation other purpose Brent(ley) bot, meant to verify users like double counter, specifically for Brentley's disocrd server.",
       image: "/B2.png",
