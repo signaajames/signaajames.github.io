@@ -22,20 +22,14 @@ const App = () => {
       ],
     },
     {
-      title: "Brent-2",
-      desc: "The second generation other purpose Brent(ley) bot, meant to verify users like double counter, specifically for Brentley's disocrd server.",
-      image: "/B2.png",
-      alt: "Brent-2 Screenshot",
+      title: "Love2d Text Editor",
+      desc: "A text editor made in Love2d (a lua game engine). I made this to learn how to make one for an upcoming project I have planned",
+      image: "/love2deditor.png",
+      alt: "love2d editor Screenshot",
       links: [
         {
           type: "github",
-          url: "https://github.com/signaajames/brent-2",
-          label: "Bot"
-        },
-        {
-          type: "github",
-          url: "https://github.com/brenttwo/brenttwo.github.io",
-          label: "Website"
+          url: "https://github.com/signaajames/love2d-text-editor",
         }
       ]
     }
