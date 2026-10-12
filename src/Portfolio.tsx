@@ -47,59 +47,6 @@ const projects: Project[] = [
     art: <img className="project-image" src={editorImage} width="960" height="360" alt="Love2d Text Editor displaying hello, world with a text cursor" />,
     text: 'A text editor made in a game engine',
   },
-  {
-    id: 'website-study',
-    group: 'designs',
-    label: 'Wireframe study',
-    title: 'Website Study',
-    ratio: 960 / 360,
-    text: 'Placeholder — a minimal website wireframe. Real design work will go here.',
-    art: (
-      <svg viewBox="0 0 960 360" role="img" aria-label="Placeholder website wireframe with a text column, image block and three small content tiles">
-        <rect width="960" height="360" fill="#101010" />
-        <rect x="88" y="48" width="784" height="206" fill="#181818" stroke="#454545" />
-        <path d="M88 78h784" stroke="#454545" />
-        <path d="M110 63h68M718 63h36M774 63h36M830 63h20" stroke="#888" strokeWidth="4" />
-        <path d="M118 118h270M118 142h216" stroke="#d6d6d6" strokeWidth="12" />
-        <path d="M118 171h232M118 183h208M118 195h168" stroke="#777" strokeWidth="4" />
-        <rect x="118" y="218" width="88" height="18" fill="none" stroke="#aaa" />
-        <rect x="480" y="98" width="364" height="96" fill="#242424" stroke="#555" />
-        <path d="m480 98 364 96m0-96-364 96" stroke="#555" />
-        <g fill="#222" stroke="#555">
-          <rect x="480" y="208" width="112" height="28" />
-          <rect x="606" y="208" width="112" height="28" />
-          <rect x="732" y="208" width="112" height="28" />
-        </g>
-      </svg>
-    ),
-  },
-  {
-    id: 'interface-study',
-    group: 'designs',
-    label: 'Wireframe study',
-    title: 'Interface Study',
-    ratio: 960 / 360,
-    text: 'Placeholder — a compact app interface wireframe. Real design work will go here.',
-    art: (
-      <svg viewBox="0 0 960 360" role="img" aria-label="Placeholder app interface wireframe with a sidebar, three panels and a small activity chart">
-        <rect width="960" height="360" fill="#101010" />
-        <rect x="88" y="48" width="784" height="206" fill="#181818" stroke="#454545" />
-        <path d="M252 48v206M252 86h620" stroke="#454545" />
-        <path d="M112 76h96" stroke="#ccc" strokeWidth="8" />
-        <rect x="106" y="103" width="128" height="24" fill="#333" />
-        <path d="M118 115h88M118 150h72M118 178h84M118 206h62" stroke="#888" strokeWidth="4" />
-        <path d="M278 68h160M752 68h94" stroke="#aaa" strokeWidth="6" />
-        <g fill="#222" stroke="#555">
-          <rect x="278" y="104" width="176" height="54" />
-          <rect x="474" y="104" width="176" height="54" />
-          <rect x="670" y="104" width="176" height="54" />
-          <rect x="278" y="176" width="568" height="58" />
-        </g>
-        <path d="M298 124h60M494 124h60M690 124h60" stroke="#aaa" strokeWidth="4" />
-        <path d="m298 218 74-20 74 12 74-18 74 10 74-16 78 8 80-10" fill="none" stroke="#ccc" strokeWidth="3" />
-      </svg>
-    ),
-  },
 ]
 
 type PortfolioProps = {
