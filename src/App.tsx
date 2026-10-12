@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import Portfolio from './Portfolio'
+import wordmark from './signaa-wordmark.svg'
 import './App.css'
 
 const vertexSource = `
@@ -53,10 +55,7 @@ function SignalScreen() {
     let disposed = false
     const gl = canvas.getContext('webgl', { alpha: false, antialias: false, depth: false })
     if (!gl) {
-      void document.fonts.load('italic 100px "Super Sliced"').catch(() => {}).then(() => {
-        if (!disposed) setFallback(true)
-      })
-      return () => { disposed = true }
+      return
     }
     let frame = 0
     const shaders: WebGLShader[] = []
@@ -99,7 +98,9 @@ function SignalScreen() {
     }
     const start = async () => {
       try {
-        await document.fonts.load('italic 100px "Super Sliced"')
+        const logo = new Image()
+        logo.src = wordmark
+        await logo.decode()
         if (disposed) return
         if (!ctx) throw new Error('Unable to create lettering texture')
         compile(gl.VERTEX_SHADER, vertexSource)
@@ -139,18 +140,12 @@ function SignalScreen() {
           canvas.height = source.height = height
           ctx.fillStyle = '#000'
           ctx.fillRect(0, 0, width, height)
-          ctx.font = 'italic 100px "Super Sliced"'
-          const reference = ctx.measureText('SIGNAA')
-          const textWidth = reference.actualBoundingBoxLeft + reference.actualBoundingBoxRight
-          const size = Math.min(width * 0.76 / textWidth * 100, height * 0.38, 250 * ratio)
-          ctx.font = `italic ${size}px "Super Sliced"`
-          const bounds = ctx.measureText('SIGNAA')
-          const x = (width - bounds.actualBoundingBoxRight + bounds.actualBoundingBoxLeft) / 2
-          const y = (height + bounds.actualBoundingBoxAscent - bounds.actualBoundingBoxDescent) / 2
-          ctx.fillStyle = '#fff'
+          const aspect = logo.naturalWidth / logo.naturalHeight
+          const logoWidth = Math.min(width * 0.76, height * 0.38 * aspect, 1300 * ratio)
+          const logoHeight = logoWidth / aspect
           ctx.shadowColor = 'rgba(255, 255, 255, 0.18)'
           ctx.shadowBlur = 22 * ratio
-          ctx.fillText('SIGNAA', x, y)
+          ctx.drawImage(logo, (width - logoWidth) / 2, (height - logoHeight) / 2, logoWidth, logoHeight)
           gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, source)
           gl.viewport(0, 0, width, height)
           gl.uniform2f(resolution, width, height)
@@ -184,7 +179,7 @@ function SignalScreen() {
   }, [])
   return (
     <div className={`signal${ready ? ' signal--ready' : ''}${fallback ? ' signal--fallback' : ''}`} aria-hidden="true">
-      <span className="signal__title">SIGNAA</span>
+      <img className="signal__title" src={wordmark} alt="" />
       <canvas className="signal__screen" ref={canvasRef} aria-hidden="true" />
     </div>
   )
@@ -214,13 +209,15 @@ function App() {
 
   return (
     <div className={`gate${opening ? ' gate--open' : ''}`}>
-      <main className="gate__reveal" ref={revealRef} tabIndex={-1} aria-label="Portfolio" inert={!revealed} />
+      <main className="gate__reveal" ref={revealRef} tabIndex={-1} aria-label="Portfolio" inert={!revealed}>
+        <Portfolio scrollContainerRef={revealRef} />
+      </main>
       {!revealed && (
         <>
           <div className="gate__panel gate__panel--left" onTransitionEnd={event => {
             if (event.target === event.currentTarget && event.propertyName === 'transform') finishOpening()
-          }}><SignalScreen /></div>
-          <div className="gate__panel gate__panel--right"><SignalScreen /></div>
+          }}><div className="gate__panel-screen"><SignalScreen /></div></div>
+          <div className="gate__panel gate__panel--right"><div className="gate__panel-screen"><SignalScreen /></div></div>
         </>
       )}
       {!opening && (

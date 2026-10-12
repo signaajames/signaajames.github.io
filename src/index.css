@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Super Sliced';
-  src: url('/fonts/SuperSliced-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
   font-display: swap;
 }
 :root {
@@ -12,6 +13,11 @@
   font-synthesis: none;
 }
 *, *::before, *::after { box-sizing: border-box; }
+::selection {
+  background: #f2f2f2;
+  color: #000;
+  text-shadow: none;
+}
 html, body, #root {
   width: 100%;
   min-height: 100%;
