@@ -44,12 +44,13 @@ void main() {
   gl_FragColor = vec4(color, 1.0);
 }`
 
-function SignalScreen() {
+function SignalScreen({ active }: { active: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [ready, setReady] = useState(false)
   const [fallback, setFallback] = useState(false)
 
   useEffect(() => {
+    if (!active) return
     const canvas = canvasRef.current
     if (!canvas) return
     let disposed = false
@@ -176,11 +177,11 @@ function SignalScreen() {
       gl.deleteProgram(program)
       shaders.forEach(shader => gl.deleteShader(shader))
     }
-  }, [])
+  }, [active])
   return (
-    <div className={`signal${ready ? ' signal--ready' : ''}${fallback ? ' signal--fallback' : ''}`} aria-hidden="true">
+    <div className={`signal${!active ? ' signal--static' : ready ? ' signal--ready' : ''}${fallback ? ' signal--fallback' : ''}`} aria-hidden="true">
       <img className="signal__title" src={wordmark} alt="" />
-      <canvas className="signal__screen" ref={canvasRef} aria-hidden="true" />
+      {active && <canvas className="signal__screen" ref={canvasRef} aria-hidden="true" />}
     </div>
   )
 }
@@ -212,18 +213,17 @@ function App() {
       <main className="gate__reveal" ref={revealRef} tabIndex={-1} aria-label="Portfolio" inert={!revealed}>
         <Portfolio scrollContainerRef={revealRef} />
       </main>
-      {!revealed && (
-        <>
-          <div className="gate__panel gate__panel--left" onTransitionEnd={event => {
-            if (event.target === event.currentTarget && event.propertyName === 'transform') finishOpening()
-          }}><div className="gate__panel-screen"><SignalScreen /></div></div>
-          <div className="gate__panel gate__panel--right"><div className="gate__panel-screen"><SignalScreen /></div></div>
-        </>
-      )}
+      <div className="gate__panel gate__panel--left" aria-hidden="true" onTransitionEnd={event => {
+        if (event.target === event.currentTarget && event.propertyName === 'transform') finishOpening()
+      }}><div className="gate__panel-screen"><SignalScreen active={!revealed} /></div></div>
+      <div className="gate__panel gate__panel--right" aria-hidden="true">
+        <div className="gate__panel-screen"><SignalScreen active={!revealed} /></div>
+      </div>
       {!opening && (
         <h1 className="gate__heading">
           <button className="gate__trigger" onClick={() => setOpening(true)} aria-label="SIGNAA — open portfolio">
             <span className="sr-only">SIGNAA</span>
+            <span className="gate__invitation" aria-hidden="true">poke it.</span>
           </button>
         </h1>
       )}

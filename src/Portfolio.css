@@ -82,7 +82,7 @@
 
   @media (max-width: 719px) {
     .opening .row.r-about { --h: min(calc((100svh - var(--foot)) * .48), 440px); }
-    .portfolio { --h: min(calc((100svh - var(--foot)) * .6), 520px); --pad: 40px; }
+    .portfolio { --h: min(calc((100svh - var(--foot)) * .6), 520px); --pad: 32px; --gap: 48px; }
     .next .soon, .tabs { font-size: 11px; }
     .slab .tab { font-size: 12px; padding: 16px 0 0 16px; }
     .slab h2 { padding: 0 14px 12px 16px; }
@@ -91,4 +91,21 @@
     .pair .slab { flex: none; width: min(100%, var(--sw, 100%)); height: var(--h); transform: none; }
     .pair p { flex: none; min-width: 0; font-size: 15px; width: var(--tw, auto); max-width: 100%; text-align: left; transform: none; position: relative; padding-bottom: 0; }
     .pair p::before { content: ""; position: absolute; z-index: -1; top: -6px; bottom: -6px; left: -16px; width: calc(var(--pw, 100%) + 32px); background: rgba(10, 10, 10, .75); transform: skewX(var(--shear)); }
+
+    /* Give the artwork and captions their own space inside the mobile slabs. */
+    .track .row { width: min(calc(100vw - var(--pad) * 2), 420px); gap: 16px; transform: none; }
+    .track .slab { display: grid; grid-template-columns: minmax(0, 1fr); height: auto; }
+    .track .slab .project-image,
+    .track .slab svg { position: static; width: 100%; height: auto; aspect-ratio: var(--arn); }
+    .track .slab::after { background: linear-gradient(to bottom, transparent, rgb(0 0 0 / 35%)); }
+    .track .slab .tab { position: relative; inset: auto; padding: 16px 18px 0; color: var(--grey); line-height: 1.4; }
+    .track .slab h2 { position: relative; inset: auto; padding: 10px 18px 20px; font-size: clamp(24px, 7vw, 32px); line-height: 1; }
+    .track .row p { line-height: 1.5; }
+  }
+
+  @media (max-width: 719px) and (max-height: 480px) and (orientation: landscape) {
+    .track .row { width: min(calc(100vw - var(--pad) * 2), 340px); gap: 10px; }
+    .track .slab .tab { padding-top: 10px; font-size: 11px; }
+    .track .slab h2 { padding-top: 6px; padding-bottom: 12px; font-size: 24px; }
+    .track .row p { font-size: 13px; }
   }

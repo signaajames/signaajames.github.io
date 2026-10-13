@@ -10,6 +10,7 @@
 
 .gate {
   --gate-cut-duration: 0.4s;
+  --gate-edge-width: clamp(4px, 0.7vw, 10px);
   position: relative;
   width: 100%;
   height: 100svh;
@@ -30,15 +31,26 @@
   scrollbar-color: #555 #000;
 }
 
-.gate__panel {
+.gate__panel,
+.gate::before,
+.gate::after {
   position: absolute;
-  z-index: 10;
   top: 0;
   bottom: 0;
   width: 50%;
+  pointer-events: none;
+  transition: transform 1.15s cubic-bezier(0.76, 0, 0.24, 1) var(--gate-cut-duration);
+}
+.gate__panel {
+  z-index: 10;
   overflow: visible;
   background: #000;
-  transition: transform 1.15s cubic-bezier(0.76, 0, 0.24, 1) var(--gate-cut-duration);
+}
+/* Both shadows sit beneath both panel surfaces, including at the center seam. */
+.gate::before,
+.gate::after {
+  content: '';
+  z-index: 9;
 }
 
 .gate__panel-screen {
@@ -47,11 +59,23 @@
   overflow: hidden;
 }
 
-.gate__panel--left { left: 0; }
-.gate__panel--right { right: 0; }
+.gate__panel--left, .gate::before { left: 0; }
+.gate__panel--right, .gate::after { right: 0; }
 .gate__panel--right .signal { margin-left: -50vw; }
-.gate--open .gate__panel--left { transform: translateX(-100%); }
-.gate--open .gate__panel--right { transform: translateX(100%); }
+.gate--open .gate__panel--left,
+.gate--open::before {
+  transform: translateX(calc(-100% + var(--gate-edge-width)));
+}
+.gate--open .gate__panel--right,
+.gate--open::after {
+  transform: translateX(calc(100% - var(--gate-edge-width)));
+}
+.gate--open::before {
+  box-shadow: 16px 0 32px rgb(0 0 0 / 85%), 4px 0 10px #000;
+}
+.gate--open::after {
+  box-shadow: -16px 0 32px rgb(0 0 0 / 85%), -4px 0 10px #000;
+}
 
 /* Each panel owns a glowing cut edge, so the center line travels with the split. */
 .gate__panel::after {
@@ -86,6 +110,7 @@
   pointer-events: none;
 }
 .gate__trigger {
+  position: relative;
   width: 78vw;
   max-width: 1300px;
   height: clamp(60px, 18vw, 250px);
@@ -101,6 +126,19 @@
   outline: 1px solid #ffffff80;
   outline-offset: 12px;
 }
+.gate__invitation {
+  position: absolute;
+  top: calc(50% + min(5.85vw, 100px, 19svh) + 14px);
+  right: calc(50% - min(38vw, 650px, 123.6svh) + 4px);
+  color: #a8a8a8;
+  font: 500 13px/1.5 'Archivo', sans-serif;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  transform: skewX(-10deg);
+  transition: color 180ms ease;
+}
+.gate__trigger:hover .gate__invitation,
+.gate__trigger:focus-visible .gate__invitation { color: #fff; }
 .sr-only {
   position: absolute;
   width: 1px;
@@ -110,8 +148,13 @@
   white-space: nowrap;
 }
 @media (prefers-reduced-motion: reduce) {
-  .gate__panel { transition-duration: 1ms; transition-delay: 0s; }
-  .gate--open .gate__panel::after { animation: none; }
+  .gate__invitation { transition: none; }
+  .gate__panel, .gate::before, .gate::after { transition-duration: 1ms; transition-delay: 0s; }
+  .gate--open .gate__panel::after {
+    animation: none;
+    opacity: 1;
+    clip-path: inset(0 -28px 0);
+  }
 }
 .signal__title {
   display: block;
@@ -132,6 +175,7 @@
 .signal--ready .signal__title { visibility: hidden; }
 .signal--fallback .signal__title { visibility: visible; }
 .signal--fallback .signal__screen { opacity: 0; }
+.signal--static .signal__title { filter: none; }
 
 /* Screen glass stays above the intro, gate transition, and all revealed content. */
 .crt-overlay {
