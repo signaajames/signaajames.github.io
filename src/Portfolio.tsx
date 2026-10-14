@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties, KeyboardEvent, ReactNode, RefObject } from 'react'
 import aboutDrawing from './assets/select-screen/about.webp'
+import alternateDrawing from './assets/select-screen/signe.png'
 import alternateWordmark from './assets/select-screen/alternate.webp'
 import calculatorImage from './assets/projects/4bit-calculator.png'
 import cattinderImage from './assets/projects/cattinder.png'
@@ -62,7 +63,7 @@ export default function Portfolio({ scrollContainerRef }: PortfolioProps) {
   const footerRef = useRef<HTMLElement>(null)
   const pairRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLSpanElement>(null)
-  const drawingRef = useRef<HTMLImageElement>(null)
+  const drawingRef = useRef<HTMLDivElement>(null)
   const descriptionRef = useRef<HTMLParagraphElement>(null)
 
   // The parent scroll-container ref is attached before passive effects run.
@@ -202,7 +203,10 @@ export default function Portfolio({ scrollContainerRef }: PortfolioProps) {
         <article className="row r-about">
           <div className="pair" ref={pairRef}>
             <div className="slab">
-              <img className="drawing" ref={drawingRef} src={aboutDrawing} width="1000" height="960" alt="A hand-drawn sketch of a character sitting down, in white line art on black" />
+              <div className="drawing" ref={drawingRef}>
+                <img className="drawing__original" src={aboutDrawing} width="1000" height="960" alt="A hand-drawn sketch of a character sitting down, in white line art on black" />
+                <img className="drawing__alternate" src={alternateDrawing} width="1280" height="1229" alt="" aria-hidden="true" />
+              </div>
               <h2 id="about-title"><span ref={titleRef} style={{ whiteSpace: 'nowrap' }}>Me Signaa</span></h2>
             </div>
             <p ref={descriptionRef}>I love making 2D games/visuals in Lua and LÖVE2D, with a soft spot for analog visuals. For the web, I design minimal, clean interfaces to my eyes and explore styles I don’t see often. I started programming in early 2025 with Python trying to make cool vfx. Now I mostly build solo, for myself and friends, making things that I want in a way I like.</p>
