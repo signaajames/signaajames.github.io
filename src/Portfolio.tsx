@@ -139,8 +139,9 @@ export default function Portfolio({ scrollContainerRef }: PortfolioProps) {
         if (!horizontal) description.style.width = `${Math.ceil(textWidth + 2)}px`
       }
 
-      distance = Math.max(0, track.offsetWidth - container.clientWidth)
-      reel.style.height = `${container.clientHeight - footer.offsetHeight + distance}px`
+      const horizontalReel = getComputedStyle(track).flexDirection === 'row'
+      distance = horizontalReel ? Math.max(0, track.offsetWidth - container.clientWidth) : 0
+      reel.style.height = horizontalReel ? `${container.clientHeight - footer.offsetHeight + distance}px` : ''
       update()
     }
 
