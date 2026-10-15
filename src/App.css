@@ -70,10 +70,12 @@
 .gate--open::after {
   transform: translateX(calc(100% - var(--gate-edge-width)));
 }
-.gate--open::before {
+.gate--open::before,
+.gate--closing::before {
   box-shadow: 16px 0 32px rgb(0 0 0 / 85%), 4px 0 10px #000;
 }
-.gate--open::after {
+.gate--open::after,
+.gate--closing::after {
   box-shadow: -16px 0 32px rgb(0 0 0 / 85%), -4px 0 10px #000;
 }
 
@@ -94,6 +96,14 @@
 .gate__panel--left::after { right: calc(var(--crt-pixel, 1px) * -0.5); }
 .gate__panel--right::after { left: calc(var(--crt-pixel, 1px) * -0.5); }
 .gate--open .gate__panel::after { animation: cut var(--gate-cut-duration) ease-out both; }
+.gate--closing .gate__panel::after {
+  animation: seal var(--gate-cut-duration) ease-in calc(1.15s + var(--gate-cut-duration)) both;
+}
+@keyframes seal {
+  0% { opacity: 1; clip-path: inset(0 -28px 0); }
+  90% { opacity: 1; clip-path: inset(0 -28px 90%); }
+  100% { opacity: 0; clip-path: inset(0 -28px 100%); }
+}
 @keyframes cut {
   0% { opacity: 0; clip-path: inset(0 -28px 100%); }
   10% { opacity: 1; clip-path: inset(0 -28px 90%); }
@@ -154,6 +164,10 @@
     animation: none;
     opacity: 1;
     clip-path: inset(0 -28px 0);
+  }
+  .gate--closing .gate__panel::after {
+    animation-duration: 1ms;
+    animation-delay: 1ms;
   }
 }
 .signal__title {

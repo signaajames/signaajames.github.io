@@ -46,11 +46,17 @@ void main() {
 
 function SignalScreen({ active }: { active: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const activeRef = useRef(active)
+  const resumeRef = useRef<() => void>(() => {})
   const [ready, setReady] = useState(false)
   const [fallback, setFallback] = useState(false)
 
   useEffect(() => {
-    if (!active) return
+    activeRef.current = active
+    resumeRef.current()
+  }, [active])
+
+  useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
     let disposed = false
@@ -130,7 +136,11 @@ function SignalScreen({ active }: { active: boolean }) {
           gl.uniform1f(time, reducedMotion.matches ? 0 : performance.now() / 1000)
           gl.uniform1f(motion, reducedMotion.matches ? 0 : 1)
           gl.drawArrays(gl.TRIANGLES, 0, 6)
-          if (!reducedMotion.matches && !document.hidden) frame = requestAnimationFrame(draw)
+          if (activeRef.current && !reducedMotion.matches && !document.hidden) frame = requestAnimationFrame(draw)
+        }
+        resumeRef.current = () => {
+          cancelAnimationFrame(frame)
+          draw()
         }
         resize = () => {
           const ratio = Math.min(window.devicePixelRatio || 1, 1.5)
@@ -167,6 +177,7 @@ function SignalScreen({ active }: { active: boolean }) {
     void start()
     return () => {
       disposed = true
+      resumeRef.current = () => {}
       cancelAnimationFrame(frame)
       window.removeEventListener('resize', resize)
       document.removeEventListener('visibilitychange', onVisibility)
@@ -177,11 +188,11 @@ function SignalScreen({ active }: { active: boolean }) {
       gl.deleteProgram(program)
       shaders.forEach(shader => gl.deleteShader(shader))
     }
-  }, [active])
+  }, [])
   return (
-    <div className={`signal${!active ? ' signal--static' : ready ? ' signal--ready' : ''}${fallback ? ' signal--fallback' : ''}`} aria-hidden="true">
+    <div className={`signal${!active ? ' signal--static' : ''}${ready ? ' signal--ready' : ''}${fallback ? ' signal--fallback' : ''}`} aria-hidden="true">
       <img className="signal__title" src={wordmark} alt="" />
-      {active && <canvas className="signal__screen" ref={canvasRef} aria-hidden="true" />}
+      <canvas className="signal__screen" ref={canvasRef} aria-hidden="true" />
     </div>
   )
 }
@@ -189,7 +200,9 @@ function SignalScreen({ active }: { active: boolean }) {
 function App() {
   const [opening, setOpening] = useState(false)
   const [revealed, setRevealed] = useState(false)
+  const [closing, setClosing] = useState(false)
   const revealRef = useRef<HTMLElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const alignScanlines = () => {
@@ -201,27 +214,67 @@ function App() {
   }, [])
 
   const finishOpening = () => {
-    setRevealed(true)
+    if (opening) setRevealed(true)
+  }
+
+  const finishClosing = () => {
+    setClosing(false)
+    requestAnimationFrame(() => triggerRef.current?.focus({ preventScroll: true }))
   }
 
   useEffect(() => {
     if (revealed) revealRef.current?.focus({ preventScroll: true })
   }, [revealed])
 
+  useEffect(() => {
+    if (!closing) return
+    // Recover the trigger even if an animation is interrupted or its end event is missed.
+    const timeout = window.setTimeout(() => {
+      setClosing(false)
+      requestAnimationFrame(() => triggerRef.current?.focus({ preventScroll: true }))
+    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 50 : 2_100)
+    return () => window.clearTimeout(timeout)
+  }, [closing])
+
+  useEffect(() => {
+    if (!revealed) return
+
+    let idleTimer: ReturnType<typeof window.setTimeout>
+    const resetIdleTimer = () => {
+      window.clearTimeout(idleTimer)
+      idleTimer = window.setTimeout(() => {
+        setClosing(true)
+        setRevealed(false)
+        setOpening(false)
+      }, 5 * 60_000)
+    }
+    const activityEvents = ['pointermove', 'pointerdown', 'keydown', 'scroll', 'wheel', 'touchmove'] as const
+    const listenerOptions = { capture: true, passive: true }
+
+    resetIdleTimer()
+    activityEvents.forEach(event => window.addEventListener(event, resetIdleTimer, listenerOptions))
+    return () => {
+      window.clearTimeout(idleTimer)
+      activityEvents.forEach(event => window.removeEventListener(event, resetIdleTimer, listenerOptions))
+    }
+  }, [revealed])
+
   return (
-    <div className={`gate${opening ? ' gate--open' : ''}`}>
+    <div className={`gate${opening ? ' gate--open' : ''}${closing ? ' gate--closing' : ''}`}>
       <main className="gate__reveal" ref={revealRef} tabIndex={-1} aria-label="Portfolio" inert={!revealed}>
         <Portfolio scrollContainerRef={revealRef} />
       </main>
       <div className="gate__panel gate__panel--left" aria-hidden="true" onTransitionEnd={event => {
         if (event.target === event.currentTarget && event.propertyName === 'transform') finishOpening()
+      }} onAnimationEnd={event => {
+        if (event.target === event.currentTarget && event.animationName === 'seal' && closing) finishClosing()
       }}><div className="gate__panel-screen"><SignalScreen active={!revealed} /></div></div>
       <div className="gate__panel gate__panel--right" aria-hidden="true">
         <div className="gate__panel-screen"><SignalScreen active={!revealed} /></div>
       </div>
-      {!opening && (
+      {!opening && !closing && (
         <h1 className="gate__heading">
-          <button className="gate__trigger" onClick={() => setOpening(true)} aria-label="SIGNAA — open portfolio">
+          <button ref={triggerRef} className="gate__trigger" onClick={() => setOpening(true)} aria-label="SIGNAA — open portfolio">
             <span className="sr-only">SIGNAA</span>
             <span className="gate__invitation" aria-hidden="true">poke it.</span>
           </button>
